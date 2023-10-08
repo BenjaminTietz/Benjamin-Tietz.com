@@ -1,9 +1,160 @@
 .portfolio-wrapper{
     margin: 0;
-    height:100vh;
+    max-height: 200vh;
     width: 100vw;
     max-width: 100%;
     background-color: #141D2F;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     color: white;
+}
+
+.portfolio-headline {
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-right: 100px;
+    margin-top: 64px;
+
+
+    h2 {
+        font-weight: 700;
+        font-size: 90px;
+        line-height: 108px;
+    }
+    .short-purple-line {
+        border: 4px solid #9747FF;
+        width: 109px;
+        z-index: 5;
+    }
+    .long-purple-line {
+        border: 4px solid #9747FF;
+        width: 484px;
+        z-index: 5;
+    }
+}
+
+.portfolio-content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 80vw;
+    max-width: 1168px;
+    height: 339px;
+    gap: 120px;
+
+    img {
+        width: 80%;
+        height: 80%;
+    }
+}
+
+.reverse {
+flex-direction:row-reverse ;
+}
+
+.align-left {
+    align-items: flex-start;
+}
+
+.align-right {
+    align-items: flex-end;
+}
+
+.portfolio-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 339px;
+    h3 {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 38.4px;
+        color: #4B47FF;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 23px;
+        line-height: 27.6px;
+        color: #00BEE8;
+    }
+
+    span {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19.2px;
+        margin-bottom: 32px;
+    }
+}
+
+.btn-container {
+    display: flex;
+    width: 375px;
+    height: 65.36px;
+    gap: 86px;
+}
+
+.btn-live-test {
+    width: 152px;
+    height: 58px;
+    border-radius: 10px;
+    gap: 10px;
+    padding: 15px, 30px, 15px, 30px;
+    border-style: none;
+    background-color:#4B47FF;
+    color: white;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 27.6px;
+
+    &:hover {
+        cursor: pointer;
+        filter: drop-shadow(rgba(0, 0, 0, 0.25));
+        background-color: #1CDAE6;
+        transition: all ease-in-out 125ms;
+    }
+}
+
+.btn-github {
+    width: 137px;
+    height: 58px;
+    padding: 15px, 30px, 15px, 30px;
+    border-radius: 10px;
+    border: 1px solid #00BEE8;
+    gap: 10px;
+    background-color: transparent;
+    color: white;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 27.6px;
+
+    &:hover {
+        cursor: pointer;
+        filter: drop-shadow(rgba(0, 0, 0, 0.25));
+        background-color: #1CDAE6;
+        transition: all ease-in-out 125ms;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .portfolio-content-wrapper {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 553px;
+        width: 100vw;
+        gap: 15px;
+    
+        img {
+            max-width: 390px;
+            max-height: 212.81px;
+        }
+    }
+    .portfolio-description {
+        width: 340px;
+        height: 305.18;
+    }
 }

@@ -1,23 +1,22 @@
-.align-column {
+.startscreen-wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-color: #141d2f;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
 }
 .home-about {
-  position: relative;
-  background-color: #141d2f;
-  height: 100vh;
-  width: 100vw;
-  max-width: 100%;
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
+  z-index: 4;
 }
 button {
-  position: absolute;
   width: 165px;
   height: 58px;
-  top: 513px;
-  left: 892px;
   border-radius: 10px;
   padding: 15px, 30px, 15px, 30px;
   gap: 10px;
@@ -28,7 +27,6 @@ button {
   line-height: 27.6px;
   border-style: none;
   margin-top: 32px;
-  z-index: 2;
 
   &:hover {
     cursor: pointer;
@@ -39,30 +37,42 @@ button {
   }
 }
 
+.portrait-container {
+  position: relative;
+  z-index: 2;
+}
+
 .portrait {
-  top: 106px;
-  left: 47px;
+  position: relative;
+  z-index: 1;
+  left: 50px;
+  height: 705px;
+  object-fit: cover;
+}
+
+.portrait-background {
+  position: absolute;
   width: 646px;
   height: 705px;
-  position: absolute;
+  left: 50px;
 }
 
 .text-wrapper {
-  position: absolute;
   width: 718px;
   height: 172px;
-  top: 297px;
-  left: 622px;
   gap: 35px;
   display: flex;
+  align-items: center;
+  justify-content: flex-start;
 
   .text-horizontal {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
   }
   .headline-1 {
+    height: 172px;
     font-weight: 400;
     font-size: 64px;
     color: white;
@@ -89,14 +99,19 @@ button {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+.startscreen-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .social-box {
   margin-top: 0;
-  position: absolute;
+
   display: flex;
   align-items: center;
   gap: 42px;
   z-index: 5;
-  top: 903px;
+
 }
 .my-email {
   color: white;
@@ -106,9 +121,10 @@ button {
 }
 .wave {
   position: absolute;
-  top: 437.6px;
+  top: 484.6px;
   width: 100%;
   height: 933.56px;
+  z-index: 3;
 }
 
 .scroll-down-alert {
@@ -119,9 +135,6 @@ button {
   gap: 60px;
   height: max-content;
   z-index: 5;
-  position: absolute;
-  top: 773px;
-  left: 1316px;
 
   img {
     width: 24px;
@@ -152,4 +165,75 @@ button {
   font-size: 23px;
   display: flex;
   transform: rotate(90deg);
+}
+
+@media screen and (max-width: 1100px) {
+  .startscreen-wrapper {
+    height: 70vh;
+}
+
+  .portrait {
+    position: relative;
+    height: 448.11px;
+    width: 410.61px;
+    object-fit: cover;
+  }
+
+
+
+  .portrait-background {
+    width: 646px;
+    height: 448.11px;
+    right: 50px;
+  }
+
+  .text-wrapper {
+    margin-top: 70px;
+    width: 353px;
+    height: 89px;
+    gap: 10px;
+    z-index: 6;
+
+    .headline-1 {
+      font-weight: 400;
+      font-size: 32px;
+      color: white;
+      line-height: 38.4px;
+      -webkit-transform: rotate(-90deg);
+    }
+
+    .headline-2 {
+      font-weight: 700;
+      font-size: 45px;
+      color: white;
+      line-height: 54px;
+    }
+
+    .headline-3 {
+      font-weight: 400;
+      font-size: 29px;
+      color: #4b47ff;
+      line-height: 34.8px;
+    }
+  }
+
+  .home-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wave {
+    position: absolute;
+    top: 360.6px;
+    width: 100%;
+    height: 50%;
+    z-index: 3;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .my-email {
+    display: none;
+  }
 }
