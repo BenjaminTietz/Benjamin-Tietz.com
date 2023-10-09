@@ -35,7 +35,6 @@ header {
         display: flex;
         gap: 50px;
         list-style: none;
-
     }
 
     .nav * {
@@ -57,10 +56,26 @@ header {
         font-size: 23px;
         font-weight: 400;
         text-transform: uppercase;
-
     }
 
     .nav a:hover {
         color: #1CDAE6;
+        transition: all .35s ease;
+    }
+}
+
+.buger-menu {
+    display: none!important;
+}
+
+
+@media screen and (max-width: 1100px) {
+    .nav {
+        display: none!important;
+    }
+
+    .buger-menu {
+        display: flex!important;
+
     }
 }
