@@ -14,6 +14,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { SkillsComponent } from './skills/skills.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     ImprintComponent,
     PortfolioComponent,
-    SkillsComponent
+    SkillsComponent,
+    MobileMenuComponent
   ],
   imports: [
     BrowserModule,

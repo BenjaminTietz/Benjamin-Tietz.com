@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
+
 
 @Component({
   selector: 'app-header',
@@ -6,9 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  isMenuOpen = false;
 
-  openBurgerMenu() {
-    
+
+  constructor(private elementRef: ElementRef) {}
+
+  toggleMenu() {
+    const menu = this.elementRef.nativeElement.querySelector('#buger-menu');
+    const menu2 = this.elementRef.nativeElement.querySelector('#nav-mobile');
+    if (menu) {
+      menu.classList.toggle('openmenu');
+      menu2.classList.toggle('show-mobile-menu');
+      this.isMenuOpen = !this.isMenuOpen;
+    }
   }
 
 }

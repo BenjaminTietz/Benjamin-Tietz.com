@@ -11,37 +11,26 @@
       <span>z</span>
     </a>
     <ul class="nav">
-      <li><a href="#aboutMe">About</a></li>
+      <li><a href="#aboutMe">About me</a></li>
+      <li><a href="#skills">My skills</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
       <li><a href="#contactMe">Contact</a></li>
     </ul>
-    <div class="buger-menu">
-      <svg
-        width="32"
-        height="32"
-        viewBox="0 0 32 32"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M1 2H31"
-          stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-        />
-        <path
-          d="M1 16H31"
-          stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-        />
-        <path
-          d="M1 30H31"
-          stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-        />
-      </svg>
+    <div class="mobile-menu-wrapper" id="nav-mobile">
+      <ul class="nav-mobile">
+        <li><a href="#aboutMe">About me</a></li>
+        <li><a href="#skills">My skills</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contactMe">Contact</a></li>
+      </ul>
+    </div>
+    <div class="buger-menu-wrapper" (click)="toggleMenu()">
+      <div class="buger-menu" id="buger-menu">
+        <span class="line-1"></span>
+        <span class="line-2"></span>
+        <span class="line-3"></span>
+      </div>
+
     </div>
   </div>
 </header>
