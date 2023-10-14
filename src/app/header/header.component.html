@@ -10,12 +10,13 @@
       <span>t</span>
       <span>z</span>
     </a>
-    <ul class="nav">
-      <li><a href="#aboutMe">About me</a></li>
-      <li><a href="#skills">My skills</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#contactMe">Contact</a></li>
-    </ul>
+    
+<ul class="nav">
+  <li><a (click)="underlineNav('aboutMe')" id="aboutMe" href="#aboutMe">About me</a></li>
+  <li><a (click)="underlineNav('skills')" id="skills" href="#skills">My skills</a></li>
+  <li><a (click)="underlineNav('portfolio')" id="portfolio" href="#portfolio">Portfolio</a></li>
+  <li><a (click)="underlineNav('contactMe')" id="contactMe" href="#contactMe">Contact</a></li>
+</ul>
     <div class="mobile-menu-wrapper" id="nav-mobile">
       <ul class="nav-mobile">
         <li><a href="#aboutMe">About me</a></li>

@@ -1,11 +1,11 @@
 .startscreen-wrapper {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    background-color: #141d2f;
-    height: 100vh;
-    width: 100vw;
-    max-width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #141d2f;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
 }
 .home-about {
   display: flex;
@@ -40,13 +40,12 @@ button {
 
 .portrait-container {
   position: relative;
-  z-index: 2;
+  z-index: 5;
 }
 
 .portrait {
   position: relative;
   z-index: 1;
-  left: 50px;
   height: 705px;
   object-fit: cover;
 }
@@ -55,21 +54,18 @@ button {
   position: absolute;
   width: 646px;
   height: 705px;
-  left: 50px;
 }
 
 .text-wrapper {
-  width: 718px;
-  height: 172px;
-  gap: 35px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
+  z-index: 10;
 
   .text-horizontal {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
   }
   .headline-1 {
@@ -96,7 +92,7 @@ button {
 .purple-line {
   width: 100px;
   height: 5px;
-  background-color: #4B47FF;
+  background-color: #4b47ff;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -112,7 +108,6 @@ button {
   align-items: center;
   gap: 42px;
   z-index: 5;
-
 }
 .my-email {
   color: white;
@@ -122,10 +117,10 @@ button {
 }
 .wave {
   position: absolute;
-  top: 484.6px;
+  top: 589.6px;
   width: 100%;
   height: 933.56px;
-  z-index: 3;
+  z-index: 4;
 }
 
 .scroll-down-alert {
@@ -140,7 +135,6 @@ button {
   img {
     width: 24px;
     height: 24px;
-    
   }
   .scroll-down-animation {
     animation: moveUpandDown 2s ease-in-out infinite;
@@ -154,10 +148,9 @@ button {
         transform: translateY(0px);
       }
 
-      100%{
+      100% {
         transform: translateY(10px);
       }
-      
     }
   }
 }
@@ -168,24 +161,20 @@ button {
   transform: rotate(90deg);
 }
 
+
 @media screen and (max-width: 1100px) {
-  .startscreen-wrapper {
-    height: 70vh;
-}
 
   .portrait {
     position: relative;
-    height: 448.11px;
-    width: 410.61px;
+    height: 90%;
+    width: 90%;
     object-fit: cover;
   }
-
-
 
   .portrait-background {
     width: 646px;
     height: 448.11px;
-    right: 50px;
+    right: 15px;
   }
 
   .text-wrapper {
@@ -226,10 +215,10 @@ button {
 
   .wave {
     position: absolute;
-    top: 360.6px;
+    top: 691.6px;
     width: 100%;
-    height: 50%;
-    z-index: 3;
+    height: 18%;
+    z-index: 5;
   }
 }
 
@@ -238,3 +227,78 @@ button {
     display: none;
   }
 }
+
+@media only screen and (max-width: 600px) {
+
+  .portrait {
+    position: relative;
+    height: 90%;
+    width: 90%;
+    object-fit: cover;
+  }
+
+  .portrait-background {
+    width: 646px;
+    height: 448.11px;
+    right: 15px;
+  }
+
+  .text-wrapper {
+    margin-top: 70px;
+    width: 353px;
+    height: 89px;
+    gap: 10px;
+    z-index: 6;
+
+    .headline-1 {
+      font-weight: 400;
+      font-size: 32px;
+      color: white;
+      line-height: 38.4px;
+      -webkit-transform: rotate(-90deg);
+    }
+
+    .headline-2 {
+      font-weight: 700;
+      font-size: 45px;
+      color: white;
+      line-height: 54px;
+    }
+
+    .headline-3 {
+      font-weight: 400;
+      font-size: 29px;
+      color: #4b47ff;
+      line-height: 34.8px;
+    }
+  }
+
+  .home-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wave {
+    position: absolute;
+    top: 691.6px;
+    width: 100%;
+    height: 18%;
+    z-index: 5;
+  }
+}
+
+// /* Extra small devices (phones, 600px and down) */
+// @media only screen and (max-width: 600px) {}
+
+// /* Small devices (portrait tablets and large phones, 600px and up) */
+// @media only screen and (min-width: 600px) {}
+
+// /* Medium devices (landscape tablets, 768px and up) */
+// @media only screen and (min-width: 768px) {}
+
+// /* Large devices (laptops/desktops, 992px and up) */
+// @media only screen and (min-width: 992px) {}
+
+// /* Extra large devices (large laptops and desktops, 1200px and up) */
+// @media only screen and (min-width: 1200px) {}
