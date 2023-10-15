@@ -91,6 +91,15 @@
             border-color: #1CDAE6;
         }
     }
+    .form-attention {
+        border-color: #E61C40;
+        background-color: #141D2F;
+    }
+
+    .form-success {
+        border-color: #70E61C;
+        background-color: #141D2F;
+    }
     .from-email{
         display: flex;
         align-items: center;
@@ -154,6 +163,11 @@
     font-size: 23px;
     line-height: 27.6px;
     align-items: center;
+    cursor: pointer;
+}
+
+.send-btn-active {
+    background-color: #00BEE8;
 }
 
 .from-checkbox{

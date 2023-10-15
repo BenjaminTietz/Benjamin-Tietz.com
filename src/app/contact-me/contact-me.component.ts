@@ -6,12 +6,21 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
   styleUrls: ['./contact-me.component.scss']
 })
 export class ContactMeComponent {
-  @ViewChild('myForm') myForm!: ElementRef;
-  @ViewChild('nameField') nameField!: ElementRef;
-  @ViewChild('emailField') emailField!: ElementRef;
-  @ViewChild('messageField') messageField!: ElementRef;
-  @ViewChild('sendButton') sendButton!: ElementRef;
-  @ViewChild('checkboxField') checkboxField!: ElementRef;
+  isSendButtonActive = false;
+
+  @ViewChild('nameField') nameField!: ElementRef<HTMLInputElement>;
+  @ViewChild('emailField') emailField!: ElementRef<HTMLInputElement>;
+  @ViewChild('messageField') messageField!: ElementRef<HTMLInputElement>;
+  @ViewChild('checkboxField') checkboxField!: ElementRef<HTMLInputElement>;
+
+  updateSendButtonClass() {
+    // Überprüfen Sie, ob alle Formularfelder ausgefüllt sind und die Checkbox aktiviert ist
+    if (this.nameField.nativeElement.checkValidity() && this.emailField.nativeElement.checkValidity() && this.messageField.nativeElement.checkValidity() && this.checkboxField.nativeElement.checked) {
+      this.isSendButtonActive = true;
+    } else {
+      this.isSendButtonActive = false;
+    }
+  }
   
 
 

@@ -20,46 +20,18 @@
       </div>
       <div class="contact-formular-right">
         <form (submit)="sendMail()" ngNativeValidate #myForm>
-          <input
-            required
-            class="from-name"
-            placeholder="Your name"
-            type="text"
-            name="name"
-            #nameField
-          />
-          <input
-            required
-            class="from-email"
-            placeholder="Your email"
-            type="email"
-            #emailField
-          />
-          <textarea
-            required
-            class="from-message"
-            placeholder="Your message"
-            type="text"
-            name="message"
-            #messageField
-          ></textarea>
-        </form>
-        <div class="under-form">
+          <input required class="from-name" placeholder="Your name" type="text" name="name" #nameField />
+          <input required class="from-email" placeholder="Your email" type="email" #emailField />
+          <textarea required class="from-message" placeholder="Your message" type="text" name="message" #messageField></textarea>
           <div class="checkbox-container">
-            <input
-              required
-              class="from-checkbox"
-              type="checkbox"
-              #checkboxField
-            />
-            <span
-              >I've read the privacy policy and agree to the processing of my
-              data as outlined.</span
-            >
+            <input required class="from-checkbox" type="checkbox" #checkboxField (change)="updateSendButtonClass()">
+            <span>I've read the privacy policy and agree to the processing of my data as outlined.</span>
           </div>
           <div class="btn-send-container">
-            <button class="send-btn">Send message :)</button>
+            <button class="send-btn" [class.send-btn-active]="isSendButtonActive">Send message :)</button>
           </div>
+        </form>
+        <div class="under-form">
           <div class="go-up-btn-container">
             <a class="go-up-btn" href="#home">
               <svg
