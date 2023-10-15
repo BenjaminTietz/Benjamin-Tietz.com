@@ -188,10 +188,14 @@ header {
     transform: translateX(0);
 }
 
-@media screen and (min-width: 1100px) {
 
-}
 @media screen and (max-width: 1100px) {
+
+    header {
+        div {
+            padding: 0 0 0 30px;
+        }
+    }
     .nav {
         display: none!important;
     }  
