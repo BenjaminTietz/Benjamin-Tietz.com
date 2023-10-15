@@ -21,13 +21,15 @@
 
 .skills-left {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     width: 60%;
     max-width: 721px;
     max-height: 414.41px;
     gap: 123px;
     margin-left: 100px;
-    z-index: 3;
+    z-index: 5;
 
     img {
         width:60px;
@@ -35,9 +37,13 @@
     }
 
     p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         font-size: 16px;
         font-weight: 700;
         line-height: 19.2px;
+        white-space: nowrap;
     }
 }
 
@@ -96,6 +102,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    white-space: nowrap;
 }
 
 .skills-headline {
@@ -111,10 +118,20 @@
     z-index: 5;
 }
 
+@media screen and (max-width: 1600px) {
+
+}
+
 @media screen and (max-width: 1100px) {
+    .skills-wrapper {
+        width: 100%;
+        align-items:center;
+        height: 50vh;
+    }
     .skills-left {
         gap: 10px;
-
+        margin-left: 0;
+        width: 100%;
         img {
             width:42px;
             height:45px;
@@ -127,12 +144,32 @@
         }
     }
 
+    .skills-background-element {
+        z-index: 4;
+    }
+
+    .skills-right {
+        width: 100%;
+        margin: 0;
+
+        p {
+            width:90%;
+        }
+    }
+    .short-purple-line {
+        width:10%!important;
+        margin-left: 16px;
+    }
     .skills-wrapper {
         flex-wrap: wrap-reverse;
         align-items: flex-start;
         justify-content: center;
     }
 
+    .skills-headline-wrapper {
+        width: 100vw;
+        justify-content: flex-end;
+    }
     .skills-headline {
         font-weight: 700;
         font-size: 45px;
@@ -148,9 +185,10 @@
 @media screen and (max-width: 600px) {
     .skills-wrapper {
         align-items:center;
-        height: 80vh;
+        height: 60vh;
     }
     .skills-left {
+        justify-content:center;
         width: 80%;
         max-width: 100%;
         margin-left: 0;
@@ -162,4 +200,9 @@
         margin-right: 0;
         z-index: 5;
     }
+}
+
+
+@media only screen and (max-width: 450px) {
+
 }

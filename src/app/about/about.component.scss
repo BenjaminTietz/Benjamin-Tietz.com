@@ -22,6 +22,7 @@
     left: 0;
     width:50%;
     margin-left: 100px;
+    z-index: 8;
 }
 .about-headline {
     position: relative;
@@ -97,14 +98,20 @@
     }
   }
 
+@media screen and (max-width: 1600px) {
+
+}
+
 @media screen and (max-width: 1100px) {
     .about-wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
     .about-left {
-        margin-left: 0px;
+        width: 90%;
+        margin: 0;
     }
 
     .about-right {
@@ -112,6 +119,7 @@
     }
 
     .about-headline {
+        margin-top: 32px;
         font-size: 45px;
         font-weight: 700;
         line-height: 54px;
@@ -121,10 +129,14 @@
 
 @media screen and (max-width: 600px) {
     .about-wrapper {
-        height: 100vh;
+        height:100vh;
     }
     .about-left {
         width: 80%;
         max-width: 100%;
     }
+}
+
+@media only screen and (max-width: 450px) {
+
 }

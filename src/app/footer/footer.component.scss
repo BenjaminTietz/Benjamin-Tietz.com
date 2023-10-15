@@ -39,6 +39,15 @@ footer {
     line-height: 19.2px;
 }
 
+.imprint-mobile {
+    display: none;
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.2px;
+}
+
 .footer-middle {
     color: white;
     font-weight: 400;
@@ -58,4 +67,22 @@ footer {
     text-decoration: none;
     font-weight: 800;
     font-size: 32px;
+}
+
+@media screen and (max-width: 1100px) {
+
+}
+
+@media screen and (max-width: 700px) {
+    .footer-wrapper {
+        flex-direction: column;
+        padding-top: 40px;
+        gap: 16px;
+    }
+    .imprint {
+        display: none;
+    }
+    .imprint-mobile {
+        display: flex;
+    }
 }
