@@ -1,14 +1,11 @@
 <div class="page-wrapper">
-  <app-header></app-header>
+  <app-header *ngIf="showHeader"></app-header>
   <app-mobile-menu></app-mobile-menu>
-  <app-startscreen></app-startscreen>
-  <app-about></app-about>
-  <app-skills></app-skills>
-  <app-portfolio></app-portfolio>
-  <app-contact-me></app-contact-me>
-  <app-footer></app-footer>
-
-  <div class="background">
-    <router-outlet></router-outlet>
-  </div>
+  <app-startscreen *ngIf="showStartscreen"></app-startscreen>
+  <app-about *ngIf="showAbout"></app-about>
+  <app-skills *ngIf="showSkills"></app-skills>
+  <app-portfolio *ngIf="showPortfolio"></app-portfolio>
+  <app-contact-me *ngIf="showContactMe"></app-contact-me>
+  <app-footer *ngIf="showFooter"></app-footer>
 </div>
+<router-outlet></router-outlet>
