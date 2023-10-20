@@ -26,10 +26,10 @@ export class HeaderComponent {
   selectedElementId: string = ''; // Fügt eine Variable hinzu, um das ausgewählte Element zu speichern
 
   underlineNav(event: Event, id: string) {
-    const clickedElement = this.elementRef.nativeElement.querySelector(`#${id}`);
+    let clickedElement = this.elementRef.nativeElement.querySelector(`#${id}`);
     
     // Entfernt die Klasse von allen Elementen
-    const allElements = this.elementRef.nativeElement.querySelectorAll('a');
+    let allElements = this.elementRef.nativeElement.querySelectorAll('a');
     allElements.forEach((element: HTMLElement) => {
       element.classList.remove('purple-underline');
     });
@@ -38,6 +38,7 @@ export class HeaderComponent {
     if (clickedElement) {
       clickedElement.classList.add('purple-underline');
       this.selectedElementId = id; // ausgewähltes Element wird aktualisiert
+      location.href=(`#${this.selectedElementId}`);
     } else {
       this.selectedElementId = ''; // wenn kein passendes Elemt gefunden wird, wird die Varaiabel zurückgesetzt
     }
