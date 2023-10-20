@@ -23,21 +23,26 @@ export class HeaderComponent {
     }
   }
 
-  selectedElementId: string = ''; // Füge eine Variable hinzu, um das ausgewählte Element zu speichern
+  selectedElementId: string = ''; // Fügt eine Variable hinzu, um das ausgewählte Element zu speichern
 
-  underlineNav(id: string) {
+  underlineNav(event: Event, id: string) {
     const clickedElement = this.elementRef.nativeElement.querySelector(`#${id}`);
-  
-    // Entferne die Klasse von allen Elementen
+    
+    // Entfernt die Klasse von allen Elementen
     const allElements = this.elementRef.nativeElement.querySelectorAll('a');
     allElements.forEach((element: HTMLElement) => {
       element.classList.remove('purple-underline');
     });
-  
-    // Füge die Klasse nur dem geklickten Element hinzu
+    
+    // Fügt die Klasse nur dem geklickten Element hinzu
     if (clickedElement) {
       clickedElement.classList.add('purple-underline');
-      this.selectedElementId = id; // Aktualisiere das ausgewählte Element
+      this.selectedElementId = id; // ausgewähltes Element wird aktualisiert
+    } else {
+      this.selectedElementId = ''; // wenn kein passendes Elemt gefunden wird, wird die Varaiabel zurückgesetzt
     }
+  
+    // Die folgende Zeile erlaubt die Standardaktion (Ankernavigation) fortzuführen
+    event.preventDefault();
   }
 }
