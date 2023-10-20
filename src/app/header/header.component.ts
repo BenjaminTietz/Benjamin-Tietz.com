@@ -14,8 +14,8 @@ export class HeaderComponent {
   constructor(private elementRef: ElementRef, private router: Router) {}
 
   toggleMenu() {
-    const menu = this.elementRef.nativeElement.querySelector('#buger-menu');
-    const menu2 = this.elementRef.nativeElement.querySelector('#nav-mobile');
+    let menu = this.elementRef.nativeElement.querySelector('#buger-menu');
+    let menu2 = this.elementRef.nativeElement.querySelector('#nav-mobile');
     if (menu) {
       menu.classList.toggle('openmenu');
       menu2.classList.toggle('show-mobile-menu');
