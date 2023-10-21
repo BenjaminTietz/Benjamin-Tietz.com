@@ -14,7 +14,6 @@ import { SkillsComponent } from './skills/skills.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
-import { RouterModule } from '@angular/router';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 @NgModule({
@@ -34,10 +33,6 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([
-      {path: 'imprint', component: ImprintComponent},
-      {path: 'privacy-policy', component: PrivacyPolicyComponent},
-    ]),
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule

@@ -23,27 +23,14 @@ export class HeaderComponent {
     }
   }
 
-  selectedElementId: string = ''; // Fügt eine Variable hinzu, um das ausgewählte Element zu speichern
-
-  underlineNav(event: Event, id: string) {
-    let clickedElement = this.elementRef.nativeElement.querySelector(`#${id}`);
+  underlineNav(event: Event) {
+    let clickedElement = event.target as HTMLAnchorElement;
     
     // Entfernt die Klasse von allen Elementen
     let allElements = this.elementRef.nativeElement.querySelectorAll('a');
     allElements.forEach((element: HTMLElement) => {
       element.classList.remove('purple-underline');
     });
-    
-    // Fügt die Klasse nur dem geklickten Element hinzu
-    if (clickedElement) {
       clickedElement.classList.add('purple-underline');
-      this.selectedElementId = id; // ausgewähltes Element wird aktualisiert
-      location.href=(`#${this.selectedElementId}`);
-    } else {
-      this.selectedElementId = ''; // wenn kein passendes Elemt gefunden wird, wird die Varaiabel zurückgesetzt
-    }
-  
-    // Die folgende Zeile erlaubt die Standardaktion (Ankernavigation) fortzuführen
-    event.preventDefault();
   }
 }
