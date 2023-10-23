@@ -16,6 +16,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

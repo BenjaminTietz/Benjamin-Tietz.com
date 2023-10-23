@@ -32,5 +32,6 @@ export class HeaderComponent {
       element.classList.remove('purple-underline');
     });
       clickedElement.classList.add('purple-underline');
+      clickedElement.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
   }
 }

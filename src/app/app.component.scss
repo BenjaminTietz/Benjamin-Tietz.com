@@ -10,29 +10,11 @@ body {
 
 .page-wrapper {
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#html {
- /* ===== Scrollbar CSS ===== */
-    /* Firefox */
-    * {
-        scrollbar-width: auto;
-        scrollbar-color: #1cdae6 #141d2f;
-      }
-    
-      /* Chrome, Edge, and Safari */
-    ::-webkit-scrollbar {
-        width: 16px;
-      }
-    
-      ::-webkit-scrollbar-track {
-        background: #141d2f;
-      }
-    
-      ::-webkit-scrollbar-thumb {
-        background-color: #1cdae6;
-        border-radius: 10px;
-        border: 0px solid #ffffff;
-      }
-}
+
 

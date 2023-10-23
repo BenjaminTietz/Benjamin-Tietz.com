@@ -19,6 +19,8 @@ export class AppComponent implements OnInit {
   showPortfolio: boolean = true;
   showContactMe: boolean = true;
   showFooter: boolean = true;
+  showImprint: boolean = false;
+  showPrivacyPolicy: boolean = false;
 
   ngOnInit() {
     this.router.events.subscribe((event) => {
@@ -28,7 +30,7 @@ export class AppComponent implements OnInit {
           currentRoute = currentRoute.firstChild;
         }
 
-        if (currentRoute.snapshot.routeConfig?.path === 'imprint' || currentRoute.snapshot.routeConfig?.path === 'privacy-policy' ) {
+        if (currentRoute.snapshot.routeConfig?.path === 'imprint' ) {
           this.showHeader = true;
           this.showStartscreen = false;
           this.showAbout = false;
@@ -36,7 +38,20 @@ export class AppComponent implements OnInit {
           this.showPortfolio = false;
           this.showContactMe = false;
           this.showFooter = true;
-        } else {
+          this.showImprint = true;
+          this.showPrivacyPolicy = false;
+        } else if (currentRoute.snapshot.routeConfig?.path === 'privacy-policy' ) {
+          this.showHeader = true;
+          this.showStartscreen = false;
+          this.showAbout = false;
+          this.showSkills = false;
+          this.showPortfolio = false;
+          this.showContactMe = false;
+          this.showFooter = true;
+          this.showImprint = false;
+          this.showPrivacyPolicy = true;  
+        }
+        else {
           this.showHeader = true;
           this.showStartscreen = true;
           this.showAbout = true;
@@ -44,6 +59,8 @@ export class AppComponent implements OnInit {
           this.showPortfolio = true;
           this.showContactMe = true;
           this.showFooter = true;
+          this.showImprint = false;
+          this.showPrivacyPolicy = false;
         }
       }
     });
