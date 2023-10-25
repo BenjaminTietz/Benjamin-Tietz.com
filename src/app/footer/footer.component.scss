@@ -57,12 +57,27 @@ footer {
 
 .imprint-mobile {
   display: none;
-  text-decoration: none;
   color: $white;
   font-weight: 400;
   font-size: 16px;
   line-height: 19.2px;
-  cursor: pointer;
+  a {
+    text-decoration: none !important;
+    color: $white;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.2px;
+    cursor: pointer;
+  }
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color:$light-blue;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 2px;    
+    text-decoration-skip: ink;
+    text-decoration-skip-ink: auto;    
+    transition: all 225ms ease-in-out;
+  }
 }
 
 .footer-middle {

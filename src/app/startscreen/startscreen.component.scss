@@ -258,7 +258,7 @@ button {
 
   .wave {
     position: absolute;
-    top: 640px;
+    top: 600px;
     width: 100% !important;
     z-index: 4;
   }
@@ -268,6 +268,7 @@ button {
   .my-email {
     display: none;
   }
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -362,10 +363,26 @@ button {
   }
 
   .wave {
-    top: 450px;
+    top: 660px;
   }
 }
 @media only screen and (max-width: 380px) {
+  .startscreen-wrapper {
+    height:100vh;
+}
+
+.portrait-container {
+  height: 50vh;
+  padding-top: 50px;
+  img {
+    padding-top: 150;
+    max-width: 100%;
+  }
+}
+.wave {
+  top: 320px;
+}
+
   .text-wrapper {
     margin-top: 70px;
     width: 280px;
@@ -393,6 +410,7 @@ button {
     margin-top: -15px;
   }
 }
+
 
 // /* Extra small devices (phones, 600px and down) */
 // @media only screen and (max-width: 600px) {}

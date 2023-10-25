@@ -16,7 +16,7 @@
           >Contact me through this form, I am interested in hearing you, knowing
           your ideas and contributing to your projects with my work.</span
         >
-        <span>Need a Frontend developer? Contact me!</span>
+        <span>Need a Frontend developer? <b>Contact me!</b></span>
       </div>
       <div class="contact-formular-right">
         <form (submit)="sendMail()" ngNativeValidate #myForm>
@@ -52,7 +52,7 @@
               (change)="updateSendButtonClass()"
             />
             <span
-              >I've read the <div class="privacy-policy"><a class="imprint" routerLink="/privacy-policy" href="#privacy-policy"> privacy policy</a></div> and agree to the processing of my
+              >I've read the <a class="privacy-policy"routerLink="/privacy-policy" href="#privacy-policy">privacy policy</a>and agree to the processing of my
               data as outlined.</span
             >
           </div>
