@@ -1,32 +1,33 @@
 body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    overflow-x: hidden;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
-    /* ===== Scrollbar CSS ===== */
-       /* Firefox */
-       * {
-           scrollbar-width: auto;
-           scrollbar-color: #1cdae6 #141d2f;
-         }
-       
-         /* Chrome, Edge, and Safari */
-       ::-webkit-scrollbar {
-           width: 16px;
-         }
-       
-         ::-webkit-scrollbar-track {
-           background: #141d2f;
-         }
-       
-         ::-webkit-scrollbar-thumb {
-           background-color: #1cdae6;
-           border-radius: 10px;
-           border: 0px solid #ffffff;
-         }
-   }
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #1cdae6 #141d2f;
+  }
+
+  /* Chrome, Edge, and Safari */
+  ::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #141d2f;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #1cdae6;
+    border-radius: 10px;
+    border: 0px solid #ffffff;
+  }
+}
+
 
 

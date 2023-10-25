@@ -1,14 +1,17 @@
+//Colors
+@import "../../assets/styles/colors.scss";
+
 .portfolio-wrapper {
   position: relative;
   margin: 0;
   height: 200vh;
   width: 100vw;
   max-width: 100%;
-  background-color: #141d2f;
+  background-color: $bg-dark-blue;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white;
+  color: $white;
 }
 
 .portfolio-headline {
@@ -27,13 +30,13 @@
     z-index: 4;
   }
   .short-purple-line {
-    border: 4px solid #9747ff;
+    border: 4px solid $purple;
     width: 109px;
     z-index: 5;
     margin-left: 500px;
   }
   .long-purple-line {
-    border: 4px solid #9747ff;
+    border: 4px solid $purple;
     width: 484px;
     z-index: 5;
   }
@@ -93,14 +96,14 @@
     font-weight: 700;
     font-size: 32px;
     line-height: 38.4px;
-    color: #4b47ff;
+    color: $purple;
   }
 
   p {
     font-weight: 400;
     font-size: 23px;
     line-height: 27.6px;
-    color: #00bee8;
+    color: $light-blue;
   }
 
   span {
@@ -126,8 +129,8 @@
   gap: 10px;
   padding: 15px, 30px, 15px, 30px;
   border-style: none;
-  background-color: #4b47ff;
-  color: white;
+  background-color: $purple;
+  color: $white;
   font-weight: 400;
   font-size: 23px;
   line-height: 27.6px;
@@ -136,7 +139,7 @@
   &:hover {
     cursor: pointer;
     filter: drop-shadow(rgba(0, 0, 0, 0.25));
-    background-color: #1cdae6;
+    background-color: $light-blue;
     transition: all ease-in-out 125ms;
   }
 }
@@ -146,10 +149,10 @@
   height: 58px;
   padding: 15px, 30px, 15px, 30px;
   border-radius: 10px;
-  border: 1px solid #00bee8;
+  border: 1px solid $light-blue;
   gap: 10px;
   background-color: transparent;
-  color: white;
+  color: $white;
   font-weight: 400;
   font-size: 23px;
   line-height: 27.6px;
@@ -158,7 +161,7 @@
   &:hover {
     cursor: pointer;
     filter: drop-shadow(rgba(0, 0, 0, 0.25));
-    background-color: #1cdae6;
+    background-color: $light-blue;
     transition: all ease-in-out 125ms;
   }
 }

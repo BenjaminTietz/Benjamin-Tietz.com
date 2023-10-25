@@ -1,8 +1,11 @@
+//Colors
+@import "../../assets/styles/colors.scss";
+
 .startscreen-wrapper {
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: #141d2f;
+  background-color: $bg-dark-blue;
   height: 100vh;
   width: 100vw;
   max-width: 100%;
@@ -23,8 +26,8 @@ button {
   border-radius: 10px;
   padding: 15px, 30px, 15px, 30px;
   gap: 10px;
-  background-color: #00bee8;
-  color: white;
+  background-color: $light-blue;
+  color:  $white;
   font-weight: 400;
   font-size: 23px;
   line-height: 27.6px;
@@ -34,7 +37,7 @@ button {
   &:hover {
     cursor: pointer;
     filter: drop-shadow(rgba(0, 0, 0, 0.25));
-    background-color: #9747ff;
+    background-color: $purple;
     transition: all ease-in-out 125ms;
     transform: scale(1.1);
   }
@@ -92,7 +95,7 @@ button {
     height: 172px;
     font-weight: 400;
     font-size: 64px;
-    color: white;
+    color: $white;
     line-height: 76.8px;
     -webkit-transform: rotate(-90deg);
     white-space: nowrap;
@@ -100,14 +103,14 @@ button {
   .headline-2 {
     font-weight: 700;
     font-size: 90px;
-    color: white;
+    color: $white;
     line-height: 108px;
     white-space: nowrap;
   }
   .headline-3 {
     font-weight: 400;
     font-size: 58px;
-    color: #4b47ff;
+    color: $purple;
     line-height: 69.6px;
     white-space: nowrap;
   }
@@ -122,7 +125,7 @@ button {
 }
 
 .scroll-down-alert {
-  color: #fff;
+  color: $white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -163,7 +166,7 @@ button {
 .purple-line {
   width: 100px;
   height: 5px;
-  background-color: #4b47ff;
+  background-color: $purple;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -182,7 +185,7 @@ button {
   z-index: 5;
 }
 .my-email {
-  color: white;
+  color: $white;
   font-size: 23px;
   font-weight: 400;
   line-height: 27.6px;

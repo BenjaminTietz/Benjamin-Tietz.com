@@ -1,3 +1,6 @@
+//Colors
+@import "../../assets/styles/colors.scss";
+
 header {
     position: fixed;
     top: 0;
@@ -8,7 +11,7 @@ header {
     justify-content: center;
     margin: 0;
     z-index: 99;
-    background-color: #141D2F;
+    background-color: $bg-dark-blue;
 
     div {
         display: flex;
@@ -50,7 +53,7 @@ header {
 
     .nav a {
         padding: .5em .8em;
-        color: #fff;
+        color: $white;
         position: relative;
         text-decoration: none;
         font-size: 23px;
@@ -59,7 +62,7 @@ header {
     }
 
     .nav a:hover {
-        color: #1CDAE6;
+        color: $light-blue;
         transition: all .35s ease;
     }
 }
@@ -67,7 +70,7 @@ header {
 .purple-underline {
     margin-top: 4px;
     text-decoration: underline!important;
-    text-decoration-color: #4b47ff!important;
+    text-decoration-color: $purple!important;
     text-decoration-thickness: 3px!important;
     transition: 225ms ease-in-out;
 }
@@ -169,7 +172,7 @@ header {
     
     .nav-mobile a {
         padding: .5em .8em;
-        color: #fff;
+        color: $white;
         position: relative;
         text-decoration: none;
         font-size: 23px;
@@ -179,7 +182,7 @@ header {
     }
 
     .nav-mobile a:hover {
-        color: #1CDAE6;
+        color: $light-blue;
         transition: all .35s ease;
     }
 }

@@ -1,3 +1,6 @@
+//Colors
+@import "../../assets/styles/colors.scss";
+
 .privacy-policy-wrapper  {
     margin-top: 100px;
     padding-left: 100px;
@@ -6,9 +9,9 @@
     width: 100vw;
     max-width: 100%;
     z-index: 10;
-    background-color: #141D2F;
+    background-color: $bg-dark-blue;
     transition: all 225ms ease-in-out;
-    color: white;
+    color: $white;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

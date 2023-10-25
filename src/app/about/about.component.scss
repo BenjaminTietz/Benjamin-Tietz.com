@@ -1,10 +1,13 @@
+//Colors
+@import "../../assets/styles/colors.scss";
+
 .about-wrapper {
     position: relative;
     margin: 0;
     height:50vh;
     width: 100vw;
     max-width: 100%;
-    background-color: #141D2F;
+    background-color: $bg-dark-blue;
     display: flex;
     color: white;
     display: flex;
@@ -65,7 +68,7 @@
 .ellipse {
     width: 453px;
     height: 453px;
-    border: 4px solid #1CDAE6;
+    border: 4px solid $light-blue;
     border-radius: 100%;
     overflow: hidden;
     z-index: 5;
@@ -75,7 +78,7 @@
     flex-shrink: 0;
 }
 .light-blue-line {
-    border: 4px solid #1CDAE6;
+    border: 4px solid $light-blue;
     width: 45%;
     position: unset;
     z-index: 5;
