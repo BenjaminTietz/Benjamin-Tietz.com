@@ -13,11 +13,12 @@ body {
 
 
 .page-wrapper {
-  overflow-x: hidden;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: $bg-dark-blue;
 }
 
 
