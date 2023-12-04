@@ -37,6 +37,7 @@ export class ContactMeComponent {
     // animation anzeigen
     let fd = new FormData();
     fd.append('name', nameField.value);
+    fd.append('email', nameField.value);
     fd.append('message', messageField.value);
     //senden
     await fetch('https://benjamin-tietz.com/send_mail.php',
