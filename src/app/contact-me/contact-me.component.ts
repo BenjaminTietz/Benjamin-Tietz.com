@@ -28,18 +28,18 @@ export class ContactMeComponent {
     let nameField = this.nameField.nativeElement;
     let emailField = this.emailField.nativeElement;
     let messageField = this.messageField.nativeElement;
-    let checkboxField = this.checkboxField.nativeElement;
+    //let checkboxField = this.checkboxField.nativeElement;
 
     nameField.disabled = true;
     emailField.disabled = true;
     messageField.disabled = true;
-    checkboxField.disabled = true;
+    //checkboxField.disabled = true;
     // animation anzeigen
     let fd = new FormData();
     fd.append('name', nameField.value);
     fd.append('message', messageField.value);
     //senden
-    await fetch('https://cdi.dev.net/sendmail.php',
+    await fetch('https://benjamin-tietz.com/send_mail.php',
       {
         method: 'POST',
         body: fd
@@ -50,7 +50,7 @@ export class ContactMeComponent {
     nameField.disabled = false;
     emailField.disabled = false;
     messageField.disabled = false;
-    checkboxField.disabled = false;
+    //checkboxField.disabled = false;
   }
 
   checkInputfield() {
