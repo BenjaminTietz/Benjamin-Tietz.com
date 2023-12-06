@@ -1,12 +1,48 @@
 //Colors
 @import "../../assets/styles/colors.scss";
 
+.success-message {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    left: 40%;
+    bottom: 45%;
+    text-align: center;
+    width: 240px;
+    height: fit-content;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    color: $form-success; // Stelle sicher, dass $form-success definiert ist
+    font-weight: 700;
+    background-color: $bg-dark-blue; // Stelle sicher, dass $bg-dark-blue definiert ist
+    z-index: 99;
+    animation: slideup 1s ease-in-out; // Hinzugefügt: timing-function und direction sind optional
+}
+.success {
+    display: flex;
+}
+
+@keyframes slideup {
+    0% {
+        transform: translateY(200px); // Änderung: Startposition nach unten verschieben
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+
 .contact-wrapper {
     position: relative;
     margin: 0;
     height:70vh;
     width: 100vw;
-    max-width: 100%;
+    max-width: 1440px;
     display: flex;
     flex-direction: column;
     color: white;

@@ -1,4 +1,5 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-me',
@@ -8,10 +9,12 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 export class ContactMeComponent {
   isSendButtonActive = false;
 
+  @ViewChild('myForm') myForm!: NgForm;
   @ViewChild('nameField') nameField!: ElementRef<HTMLInputElement>;
   @ViewChild('emailField') emailField!: ElementRef<HTMLInputElement>;
   @ViewChild('messageField') messageField!: ElementRef<HTMLInputElement>;
   @ViewChild('checkboxField') checkboxField!: ElementRef<HTMLInputElement>;
+  @ViewChild('successMessage') successMessage!: ElementRef<HTMLParagraphElement>;
 
   updateSendButtonClass() {
     // Überprüfen Sie, ob alle Formularfelder ausgefüllt sind und die Checkbox aktiviert ist
@@ -28,12 +31,11 @@ export class ContactMeComponent {
     let nameField = this.nameField.nativeElement;
     let emailField = this.emailField.nativeElement;
     let messageField = this.messageField.nativeElement;
-    //let checkboxField = this.checkboxField.nativeElement;
 
     nameField.disabled = true;
     emailField.disabled = true;
     messageField.disabled = true;
-    //checkboxField.disabled = true;
+
     // animation anzeigen
     let fd = new FormData();
     fd.append('name', nameField.value);
@@ -47,12 +49,18 @@ export class ContactMeComponent {
       }
       );
 
-      // Text anzeigen: Nachricht gesendet
+      this.successMessage.nativeElement.classList.add('success');
+    setTimeout(() => {
+      this.successMessage.nativeElement.classList.remove('success');
+      }, 2000);
+
+    if (this.myForm) {
+      this.myForm.reset();
+    }
     nameField.disabled = false;
     emailField.disabled = false;
     messageField.disabled = false;
-    //checkboxField.disabled = false;
-  }
+   }
 
   checkInputfield() {
 

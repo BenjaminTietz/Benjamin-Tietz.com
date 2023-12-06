@@ -7,7 +7,7 @@
   flex-direction: column;
   height: 100vh;
   width: 100vw;
-  max-width: 100%;
+  max-width: 1440px;
   margin-top: 104px;
 }
 .home-about {
@@ -50,7 +50,7 @@ button {
   z-index: 4;
   img {
     padding-top: 130px;
-    max-width: 90%;
+    max-width: 115%;
   }
 }
 
@@ -367,22 +367,7 @@ button {
   }
 }
 @media only screen and (max-width: 380px) {
-  .startscreen-wrapper {
-    height:100vh;
-}
 
-.portrait-container {
-  height: 50vh;
-  padding-top: 50px;
-  img {
-    padding-top: 150;
-    max-width: 100%;
-  }
-}
-.wave {
-  top: 850px;
-  width: 102% !important;
-}
 
   .text-wrapper {
     margin-top: 70px;

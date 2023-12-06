@@ -34,4 +34,5 @@ export class HeaderComponent {
       clickedElement.classList.add('purple-underline');
       clickedElement.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
   }
+  
 }
