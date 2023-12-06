@@ -34,5 +34,15 @@ export class HeaderComponent {
       clickedElement.classList.add('purple-underline');
       clickedElement.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
   }
-  
+
+   closeMenuAndScroll(anchor: string) {
+
+    let targetElement = document.querySelector(anchor);
+    if (targetElement) {
+        targetElement.scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+    setTimeout(() => {  this.toggleMenu(); }, 750);
+}
 }

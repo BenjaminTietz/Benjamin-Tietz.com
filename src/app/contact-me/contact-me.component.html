@@ -22,13 +22,14 @@
         <span>Need a Frontend developer? <b>Contact me!</b></span>
       </div>
       <div class="contact-formular-right">
-        <form (submit)="sendMail()" ngNativeValidate #myForm>
+        <form (ngSubmit)="sendMail()" [formGroup]="myForm" ngNativeValidate>
           <input
             required
             class="from-name"
             placeholder="Your name"
             type="text"
             name="name"
+            formControlName="name"
             #nameField
           />
           <input
@@ -36,6 +37,7 @@
             class="from-email"
             placeholder="Your email"
             type="email"
+            formControlName="email"
             #emailField
           />
           <textarea
@@ -44,6 +46,7 @@
             placeholder="Your message"
             type="text"
             name="message"
+            formControlName="message"
             #messageField
           ></textarea>
           <div class="checkbox-container">
@@ -51,6 +54,7 @@
               required
               class="from-checkbox"
               type="checkbox"
+              formControlName="privacyPolicy"
               #checkboxField
               (change)="updateSendButtonClass()"
             />

@@ -1,5 +1,6 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-me',
@@ -8,13 +9,22 @@ import { NgForm } from '@angular/forms';
 })
 export class ContactMeComponent {
   isSendButtonActive = false;
-
-  @ViewChild('myForm') myForm!: NgForm;
+  myForm!: FormGroup;
+  
   @ViewChild('nameField') nameField!: ElementRef<HTMLInputElement>;
   @ViewChild('emailField') emailField!: ElementRef<HTMLInputElement>;
   @ViewChild('messageField') messageField!: ElementRef<HTMLInputElement>;
   @ViewChild('checkboxField') checkboxField!: ElementRef<HTMLInputElement>;
   @ViewChild('successMessage') successMessage!: ElementRef<HTMLParagraphElement>;
+
+  constructor(private fb: FormBuilder) {
+    this.myForm = this.fb.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      message: ['', Validators.required],
+      privacyPolicy: [false, Validators.requiredTrue]
+    });
+  }
 
   updateSendButtonClass() {
     // Überprüfen Sie, ob alle Formularfelder ausgefüllt sind und die Checkbox aktiviert ist
@@ -54,7 +64,8 @@ export class ContactMeComponent {
       this.successMessage.nativeElement.classList.remove('success');
       }, 2000);
 
-    if (this.myForm) {
+    if (this.myForm instanceof FormGroup) {
+      // Setze das Formular zurück
       this.myForm.reset();
     }
     nameField.disabled = false;
