@@ -12,6 +12,7 @@
     color: $white;
     padding-left: 100px;
     padding-right: 100px;
+    z-index: 10;
 }
 .icon-wrapper{
     display: flex;
@@ -209,6 +210,10 @@
 
 
 @media only screen and (max-width: 450px) {
+    .skills-wrapper {
+        padding-top: 160px;
+        margin-top: 100px;
+    }
     .skills-left {
         justify-content:center;
         width: 80%;
