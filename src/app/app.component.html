@@ -1,13 +1,20 @@
 <div class="page-wrapper">
-  <app-header *ngIf="showHeader"></app-header>
+  @if(this.showHeader) {<app-header></app-header>}
   <app-mobile-menu></app-mobile-menu>
-  <app-startscreen *ngIf="showStartscreen"></app-startscreen>
-  <app-about *ngIf="showAbout"></app-about>
-  <app-skills *ngIf="showSkills"></app-skills>
-  <app-portfolio *ngIf="showPortfolio"></app-portfolio>
-  <app-contact-me *ngIf="showContactMe"></app-contact-me>
-  <app-imprint *ngIf="showImprint"></app-imprint>
-  <app-privacy-policy *ngIf="showPrivacyPolicy"></app-privacy-policy>
-  <app-footer *ngIf="showFooter"></app-footer>
-</div>
+  @if (this.showStartscreen) { <app-startscreen></app-startscreen>}
 
+  @if (this.showAbout) { <app-about></app-about>}
+
+  @if (this.showSkills) { <app-skills></app-skills>}
+
+  @if (this.showPortfolio) { <app-portfolio></app-portfolio>}
+
+  @if (this.showContactMe) { <app-contact-me></app-contact-me>}
+
+  @if (this.showImprint) { <app-imprint></app-imprint>}
+
+  @if (this.showPrivacyPolicy) { <app-privacy-policy></app-privacy-policy>}
+
+  @if (this.showFooter) { <app-footer></app-footer>}
+
+</div>
