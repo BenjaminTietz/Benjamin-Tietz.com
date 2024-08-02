@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "benjamin-tietz.com:build:production"
+              "buildTarget": "benjamin-tietz.com:build:production"
             },
             "development": {
-              "browserTarget": "benjamin-tietz.com:build:development"
+              "buildTarget": "benjamin-tietz.com:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "benjamin-tietz.com:build"
+            "buildTarget": "benjamin-tietz.com:build"
           }
         },
         "test": {
