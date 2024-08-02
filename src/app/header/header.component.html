@@ -10,20 +10,32 @@
       <span>t</span>
       <span>z</span>
     </a>
-    
-<ul class="nav">
-  <li><a (click)="underlineNav($event)" href="#aboutMe">About me</a></li>
-  <li><a (click)="underlineNav($event)" href="#skills">My skills</a></li>
-  <li><a (click)="underlineNav($event)" href="#portfolio">Portfolio</a></li>
-  <li><a (click)="underlineNav($event)" href="#contactMe">Contact</a></li>
-</ul>
+
+    <ul class="nav">
+      <li><a (click)="underlineNav($event)" href="#aboutMe">About me</a></li>
+      <li><a (click)="underlineNav($event)" href="#skills">My skills</a></li>
+      <li><a (click)="underlineNav($event)" href="#portfolio">Portfolio</a></li>
+      <div class="language-selection">
+        <div *ngIf="showGermanVersion; else showEnglish">
+          <div class="icon-container">
+            <img src="assets/img/german.png" alt="german_icon">
+          </div>
+        </div>
+        <ng-template #showEnglish>
+          <div class="icon-container">
+            <img src="assets/img/english.png" alt="english_icon">
+          </div>
+        </ng-template>
+      </div>
+    </ul>
+
     <div class="mobile-menu-wrapper" id="nav-mobile">
       <ul class="nav-mobile">
         <li><a href="#aboutMe" (click)="closeMenuAndScroll('#aboutMe')">About me</a></li>
         <li><a href="#skills" (click)="closeMenuAndScroll('#skills')">My skills</a></li>
         <li><a href="#portfolio" (click)="closeMenuAndScroll('#portfolio')">Portfolio</a></li>
         <li><a href="#contactMe" (click)="closeMenuAndScroll('#contactMe')">Contact</a></li>
-    </ul>
+      </ul>
     </div>
     <div class="buger-menu-wrapper" (click)="toggleMenu()">
       <div class="buger-menu" id="buger-menu">

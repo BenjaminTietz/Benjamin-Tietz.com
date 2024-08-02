@@ -36,7 +36,7 @@ header {
 
     .nav {
         display: flex;
-        gap: 50px;
+        gap: 25x;
         list-style: none;
         white-space: nowrap;
     }
@@ -67,6 +67,42 @@ header {
         transition: all .35s ease;
     }
 }
+
+.language-selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+
+    .icon-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        box-sizing: border-box;
+        border: 5px solid transparent;
+        transition: transform 175ms ease-in-out, border 175ms ease-in-out;
+
+        &:hover  {
+            transform: scale(1.1);
+            border: 5px solid $light-blue;
+        }
+
+
+        img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+    }
+
+}
+
 
 .purple-underline {
     margin-top: 4px;

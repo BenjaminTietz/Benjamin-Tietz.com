@@ -71,9 +71,7 @@ export class ContactMeComponent {
     nameField.disabled = false;
     emailField.disabled = false;
     messageField.disabled = false;
+    this.isSendButtonActive = false;
+    console.log('isSendButtonActive: ', this.isSendButtonActive);
    }
-
-  checkInputfield() {
-
-  }
 }

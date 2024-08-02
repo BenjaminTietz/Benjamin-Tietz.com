@@ -1,15 +1,15 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
   title = 'benjamin-tietz.com';
-  
+
   constructor(private route: ActivatedRoute, private router: Router) {}
 
   showHeader: boolean = true;
@@ -21,6 +21,8 @@ export class AppComponent implements OnInit {
   showFooter: boolean = true;
   showImprint: boolean = false;
   showPrivacyPolicy: boolean = false;
+  showEnglishVersion: boolean = true;
+  showGermanVersion: boolean = false;
 
   ngOnInit() {
     this.router.events.subscribe((event) => {
@@ -30,7 +32,7 @@ export class AppComponent implements OnInit {
           currentRoute = currentRoute.firstChild;
         }
 
-        if (currentRoute.snapshot.routeConfig?.path === 'imprint' ) {
+        if (currentRoute.snapshot.routeConfig?.path === 'imprint') {
           this.showHeader = true;
           this.showStartscreen = false;
           this.showAbout = false;
@@ -40,7 +42,9 @@ export class AppComponent implements OnInit {
           this.showFooter = true;
           this.showImprint = true;
           this.showPrivacyPolicy = false;
-        } else if (currentRoute.snapshot.routeConfig?.path === 'privacy-policy' ) {
+        } else if (
+          currentRoute.snapshot.routeConfig?.path === 'privacy-policy'
+        ) {
           this.showHeader = true;
           this.showStartscreen = false;
           this.showAbout = false;
@@ -49,9 +53,8 @@ export class AppComponent implements OnInit {
           this.showContactMe = false;
           this.showFooter = true;
           this.showImprint = false;
-          this.showPrivacyPolicy = true;  
-        }
-        else {
+          this.showPrivacyPolicy = true;
+        } else {
           this.showHeader = true;
           this.showStartscreen = true;
           this.showAbout = true;
@@ -64,5 +67,12 @@ export class AppComponent implements OnInit {
         }
       }
     });
+  }
+
+  handleToggleLanguage(isEnglish: boolean) {
+    this.showEnglishVersion = isEnglish;
+    this.showGermanVersion = !isEnglish;
+
+    console.log('Language toggled to: ' + (isEnglish ? 'English' : 'German'));
   }
 }

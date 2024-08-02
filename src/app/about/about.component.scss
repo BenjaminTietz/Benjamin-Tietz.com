@@ -15,7 +15,7 @@
     gap:25px;
     padding-left: 100px;
     padding-right: 100px;
-    margin-top: 120px;
+    padding-top: 64px;
 }
 .background-element {
     position: absolute;
@@ -68,6 +68,7 @@
     align-items: center;
 }
 .ellipse {
+    position: relative;
     width: 453px;
     height: 453px;
     border: 4px solid $light-blue;
@@ -78,6 +79,15 @@
     justify-content: center;
     align-items: flex-start;
     flex-shrink: 0;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 .light-blue-line {
     border: 4px solid $light-blue;
@@ -100,6 +110,12 @@
         transform: scale(1);
       }
       
+    }
+  }
+
+  @media screen and (min-width: 1600px) {
+    .about-wrapper {
+      max-width: 100%;
     }
   }
 

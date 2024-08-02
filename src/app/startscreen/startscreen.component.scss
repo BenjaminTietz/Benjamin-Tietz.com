@@ -29,7 +29,7 @@ button {
   padding: 15px, 30px, 15px, 30px;
   gap: 10px;
   background-color: $light-blue;
-  color:  $white;
+  color: $white;
   font-weight: 400;
   font-size: 23px;
   line-height: 27.6px;
@@ -52,15 +52,15 @@ button {
   position: relative;
   z-index: 4;
   img {
-    padding-top: 130px;
     max-width: 115%;
+    max-height: 1000px;
   }
 }
 
 .portrait {
   position: relative;
   z-index: 1;
-  height: 705px;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -99,7 +99,7 @@ button {
     font-size: 64px;
     color: $white;
     line-height: 76.8px;
-    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
     white-space: nowrap;
   }
   .headline-2 {
@@ -176,7 +176,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: -140px;
+  margin-top: -300px;
 }
 .social-box {
   margin-top: 100px;
@@ -184,12 +184,22 @@ button {
   align-items: center;
   gap: 42px;
   z-index: 5;
+
+  .icon {
+    transition: transform 0.175s ease;
+  }
+  
+  .icon:hover {
+    transform: scale(1.1); 
+  }
+
 }
 .my-email {
   color: $white;
   font-size: 23px;
   font-weight: 400;
   line-height: 27.6px;
+  text-decoration: none;
 }
 .wave {
   position: absolute;
@@ -200,7 +210,16 @@ button {
   height: auto;
   z-index: 4;
 }
+@media screen and (min-width: 1600px) {
+  .startscreen-wrapper {
+    max-width: 100%;
+  }
+}
+
 @media screen and (max-width: 1600px) {
+  .startscreen-wrapper {
+    margin-top: 56px;
+  }
   .headline-1 {
     font-size: calc(32px + 2vh) !important;
     margin-top: 5px;
@@ -212,12 +231,47 @@ button {
   .headline-3 {
     font-size: calc(29px + 2vh) !important;
   }
+  .wave {
+    top: 68vh;
+  }
+  .startscreen-bottom {
+    margin-top: -220px;
+    padding-bottom: 32px;
+  }
+  .portrait-container {
+    img {
+      max-height: 800px;
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .startscreen-wrapper {
+    margin-left: unset;
+    margin-top: 40px;
+  }
+  .startscreen-bottom {
+    margin-top: -198px;
+  }
+  .wave {
+    top: 68vh;
+    max-height: 320px;
+  }
 }
 
 @media screen and (max-width: 1100px) {
+  .startscreen-wrapper {
+    margin-top: 32px;
+    height: 86vh;
+  }
+
+  .startscreen-right {
+    position: absolute;
+    bottom: -32px;
+  }
   .portrait {
     position: relative;
-    height: 90%;
+    height: 110%;
     width: 90%;
     object-fit: cover;
   }
@@ -226,6 +280,16 @@ button {
     width: 646px;
     height: 448.11px;
     right: 75px;
+  }
+
+  .portrait-container {
+    margin-top: unset;
+    max-height: 800px;
+    margin-top: 32px;
+    img {
+      max-width: 100%;
+      max-height: 80%;
+    }
   }
 
   .text-wrapper {
@@ -261,26 +325,49 @@ button {
 
   .wave {
     position: absolute;
-    top: 800px;
+    top: 62vh;
+    max-height: 282px;
     width: 100% !important;
     z-index: 4;
+  }
+
+  .startscreen-bottom {
+    margin-top: -60px;
+  }
+
+  .social-box {
+    margin-top: 160px;
   }
 }
 
 @media screen and (max-width: 850px) {
+  .startscreen-wrapper {
+    margin-top: -80px;
+    height: 90vh;
+    margin-left: unset;
+  }
+
+  .startscreen-right {
+    bottom: -40px;
+  }
   .my-email {
     display: none;
   }
+
   .wave {
-    position: absolute;
-    top: 800px;
-    width: 100% !important;
-    z-index: 4;
+    top: 53vh;
   }
 
+  .social-box {
+    margin-top: 120px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
+  .startscreen-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .portrait {
     position: relative;
     height: 90%;
@@ -318,7 +405,7 @@ button {
   .wave {
     top: 710px;
   }
-  
+
   .home-about {
     display: flex;
     flex-direction: column;
@@ -327,17 +414,44 @@ button {
   .scroll-down-alert {
     display: none;
   }
+  .startscreen-right {
+    bottom: 20px;
+  }
+
+  .portrait-container {
+    height: 90%;
+  }
 }
 
 @media only screen and (max-width: 450px) {
   .startscreen-wrapper {
     margin-top: 0;
   }
+  .portrait-container {
+    height: 650px;
+    max-width: 100%;
+  }
+
+  .align-center {
+    margin-top: -30px;
+  }
+
+  .wave {
+    top: 60vh;
+    max-height: 216px;
+  }
+
+  .startscreen-right {
+    bottom: -12px;
+  }
+  .home-about {
+    padding-right: 0;
+    padding-left: 0;
+  }
   .text-wrapper {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 70px;
     gap: 20px;
     z-index: 6;
     .text-horizontal {
@@ -350,75 +464,97 @@ button {
       margin-left: -150px;
     }
     .headline-1 {
-      font-size: calc(32px - 2.5vw)!important;
+      font-size: calc(32px - 2.5vw) !important;
       margin-top: 10px;
     }
 
     .headline-2 {
-      font-size: calc(45px - 2.5vw)!important;
+      font-size: calc(45px - 2.5vw) !important;
       white-space: wrap;
     }
     .headline-3 {
-      font-size: calc(29px - 2.5vw)!important;
+      font-size: calc(29px - 2.5vw) !important;
       margin-top: -60px;
       white-space: wrap;
     }
+  }
+
+  button {
+    height:40px;
   }
 
   .social-box {
     gap: 30px;
   }
   .startscreen-bottom {
-    margin-top: -50px;
-  }
-
-  .wave {
-    top: 710px;
+    margin-top: -100px;
   }
 }
 @media only screen and (max-width: 380px) {
+  .wave {
+    top: 56vh;
+    max-height: 216px;
+  }
 
+  .portrait-container {
+    height: 500px;
+  }
+
+  .align-center {
+    margin-top: 0;
+  }
+
+  button {
+    margin-top: unset;
+  }
+
+  .startscreen-right {
+    bottom: 40px;
+  }
+
+  .startscreen-bottom {
+    margin-top: -168px;
+  }
 
   .text-wrapper {
-    margin-top: 70px;
-    width: 280px;
-    gap: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 4px;
     z-index: 6;
     .text-horizontal {
-    margin-left: -125px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      z-index: 5;
+      position: relative;
+      margin-left: -150px;
     }
     .headline-1 {
-      font-size: calc(32px - 5vw)!important;
+      font-size: calc(32px - 3.5vw) !important;
       margin-top: 10px;
     }
 
     .headline-2 {
-      font-size: calc(45px - 5vw)!important;
+      font-size: calc(45px - 4.5vw) !important;
       white-space: wrap;
     }
     .headline-3 {
-      font-size: calc(29px - 5vw)!important;
+      font-size: calc(29px - 2.5vw) !important;
       margin-top: -60px;
       white-space: wrap;
     }
   }
-  .align-center {
-    margin-top: -15px;
+  .social-box {
+    margin-top: 160px;
   }
 }
 
+@media only screen and (max-width: 340px) {
 
-// /* Extra small devices (phones, 600px and down) */
-// @media only screen and (max-width: 600px) {}
+.startscreen-right {
+  margin-left: 30px;
+}  
 
-// /* Small devices (portrait tablets and large phones, 600px and up) */
-// @media only screen and (min-width: 600px) {}
-
-// /* Medium devices (landscape tablets, 768px and up) */
-// @media only screen and (min-width: 768px) {}
-
-// /* Large devices (laptops/desktops, 992px and up) */
-// @media only screen and (min-width: 992px) {}
-
-// /* Extra large devices (large laptops and desktops, 1200px and up) */
-// @media only screen and (min-width: 1200px) {}
+}
