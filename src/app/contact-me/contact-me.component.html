@@ -3,10 +3,7 @@
     <div class="success-message" #successMessage>
       <p>Your message has been sent successfully!</p>
     </div>
-    <img
-      class="contact-background-element"
-      src="assets/img/background-elements/background-element_4.png"
-    /><img />
+    <img class="contact-background-element" src="assets/img/background-elements/background-element_4.png" /><img />
     <div class="headline-container">
       <div class="small-purple-line"></div>
       <h2>Contact</h2>
@@ -15,76 +12,73 @@
     <div class="contact-formular-wrapper">
       <div class="contact-formular-left">
         <p>Got a problem to solve?</p>
-        <span
-          >I'm thrilled to connect with you! Let's collaborate to create something extraordinary. As a frontend developer, my passion lies in bringing innovative ideas to life. I am eager to work together to turn visions into a remarkable product that delivers an exceptional user experience. Let's build greatness together!</span
-        >
-        <span>Need a Frontend developer? Contact me through this form or drop me a mail <a href="mailto:mail@benjamin-tietz.com"><b>mail&#64;benjamin-tietz.com</b></a><br><br> I will get back to you as soon as possible!</span>
+        <span>I'm thrilled to connect with you! Let's collaborate to create something extraordinary. As a frontend
+          developer, my passion lies in bringing innovative ideas to life. I am eager to work together to turn visions
+          into a remarkable product that delivers an exceptional user experience. Let's build greatness together!</span>
+        <span>Need a Frontend developer? Contact me through this form or drop me a mail <a
+            href="mailto:mail@benjamin-tietz.com"><b>mail&#64;benjamin-tietz.com</b></a><br><br> I will get back to you
+          as soon as possible!</span>
       </div>
+      <!-- contact-form.component.html -->
       <div class="contact-formular-right">
-        <form (ngSubmit)="sendMail()" [formGroup]="myForm" ngNativeValidate>
-          <input
-            required
-            class="from-name"
-            placeholder="Your name"
-            type="text"
-            name="name"
-            formControlName="name"
-            #nameField
-          />
-          <input
-            required
-            class="from-email"
-            placeholder="Your email"
-            type="email"
-            formControlName="email"
-            #emailField
-          />
-          <textarea
-            required
-            class="from-message"
-            placeholder="Your message"
-            type="text"
-            name="message"
-            formControlName="message"
-            #messageField
-          ></textarea>
+        <form (ngSubmit)="sendMail()" [formGroup]="myContactForm" action="https://formspree.io/f/xovadpqr"
+          method="POST">
+          <input required class="from-input relative" placeholder="Your name" type="text" formControlName="name"
+            name="name" />
+          @if (myContactForm.get('name')?.dirty && (hasError('name', 'required') || hasError('name', 'fullName'))) {
+          <span class="error-msg">
+            *Please enter first and last name!
+          </span>
+          }
+          <input required class="from-input relative" placeholder="Your email" type="email" formControlName="email"
+            name="email" />
+          @if (myContactForm.get('email')?.dirty && hasError('email', 'required')) {
+          <span class="error-msg">
+            *Please enter a valid email address!
+          </span>
+          }
+          @if (myContactForm.get('email')?.dirty && hasError('email', 'email')) {
+          <span class="error-msg">
+            *Please enter a valid email address!
+          </span>
+          }
+
+          <textarea required class="from-message relative" placeholder="Your message" type="text"
+            formControlName="message" name="message"></textarea>
+          @if (myContactForm.get('message')?.dirty && hasError('message', 'required')) {
+          <span class="error-msg">
+            *Please enter a message!
+          </span>
+          }
+
           <div class="checkbox-container">
-            <input
-              required
-              class="from-checkbox"
-              type="checkbox"
-              formControlName="privacyPolicy"
-              #checkboxField
-              (change)="updateSendButtonClass()"
-            />
-            <span
-              >I've read the <a class="privacy-policy"routerLink="/privacy-policy" href="#privacy-policy">privacy policy</a>and agree to the processing of my
-              data as outlined.</span
-            >
+            <input required class="from-checkbox relative" type="checkbox" formControlName="privacyPolicy"
+              name="privacyPolicy" />
+            <span>
+              I've read the <a class="privacy-policy" routerLink="/privacy-policy" href="#privacy-policy">privacy
+                policy</a> and agree to the processing of my data as outlined.
+            </span>
           </div>
+          @if (myContactForm.get('privacyPolicy')?.dirty && hasError('privacyPolicy', 'required')) {
+          <span class="error-msg">
+            *Please accept the privacy policy!
+          </span>
+          }
+
           <div class="btn-send-container">
-            <button
-              class="send-btn"
-              [class.send-btn-active]="isSendButtonActive"
-            >
+            <button class="send-btn" [ngClass]="{'send-btn-active': myContactForm.valid}"
+              [disabled]="!myContactForm.valid">
               Send message :)
             </button>
           </div>
         </form>
+
         <div class="go-up-btn-container">
           <a class="go-up-btn" href="#home">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                class="go-up-btn"
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="go-up-btn"
                 d="M11 7.828L6.34302 12.485C5.95255 12.8755 5.31948 12.8755 4.92902 12.485C4.53855 12.0945 4.53855 11.4615 4.92902 11.071L11.2929 4.70711C11.6834 4.31658 12.3166 4.31658 12.7071 4.70711L19.071 11.071C19.4615 11.4615 19.4615 12.0945 19.071 12.485C18.6806 12.8755 18.0475 12.8755 17.657 12.485L13 7.828L13 19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19L11 7.828Z"
-                fill="white"
-              />
+                fill="white" />
             </svg>
           </a>
         </div>

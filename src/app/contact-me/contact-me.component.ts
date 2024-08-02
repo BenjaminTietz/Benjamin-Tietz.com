@@ -1,77 +1,77 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
+import {
+  FormGroup,
+  FormBuilder,
+  Validators,
+  AbstractControl,
+  ValidationErrors,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-contact-me',
   templateUrl: './contact-me.component.html',
-  styleUrls: ['./contact-me.component.scss']
+  styleUrls: ['./contact-me.component.scss'],
 })
-export class ContactMeComponent {
-  isSendButtonActive = false;
-  myForm!: FormGroup;
-  
-  @ViewChild('nameField') nameField!: ElementRef<HTMLInputElement>;
-  @ViewChild('emailField') emailField!: ElementRef<HTMLInputElement>;
-  @ViewChild('messageField') messageField!: ElementRef<HTMLInputElement>;
-  @ViewChild('checkboxField') checkboxField!: ElementRef<HTMLInputElement>;
-  @ViewChild('successMessage') successMessage!: ElementRef<HTMLParagraphElement>;
+export class ContactMeComponent implements OnInit {
+  myContactForm!: FormGroup;
 
-  constructor(private fb: FormBuilder) {
-    this.myForm = this.fb.group({
-      name: ['', Validators.required],
+  @ViewChild('successMessage')
+  successMessage!: ElementRef<HTMLParagraphElement>;
+
+  constructor(private fb: FormBuilder) {}
+
+  ngOnInit(): void {
+    this.myContactForm = this.fb.group({
+      name: ['', [Validators.required, this.fullNameValidator]],
       email: ['', [Validators.required, Validators.email]],
       message: ['', Validators.required],
-      privacyPolicy: [false, Validators.requiredTrue]
+      privacyPolicy: [false, Validators.requiredTrue],
     });
   }
 
-  updateSendButtonClass() {
-    // Überprüfen Sie, ob alle Formularfelder ausgefüllt sind und die Checkbox aktiviert ist
-    if (this.nameField.nativeElement.checkValidity() && this.emailField.nativeElement.checkValidity() && this.messageField.nativeElement.checkValidity() && this.checkboxField.nativeElement.checked) {
-      this.isSendButtonActive = true;
-    } else {
-      this.isSendButtonActive = false;
-    }
+  /**
+   * Custom validator to check if the input is a full name (two words).
+   * @param {AbstractControl} control - The form control to validate.
+   * @returns {ValidationErrors | null} An object with validation errors or null if the control is valid.
+   */
+  fullNameValidator(control: AbstractControl): ValidationErrors | null {
+    const fullNamePattern = /^[a-zA-Z]+ [a-zA-Z]+$/;
+    return fullNamePattern.test(control.value) ? null : { fullName: true };
   }
-  
 
+  hasError(controlName: string, errorName: string): boolean {
+    return this.myContactForm.controls[controlName].hasError(errorName);
+  }
 
   async sendMail() {
-    let nameField = this.nameField.nativeElement;
-    let emailField = this.emailField.nativeElement;
-    let messageField = this.messageField.nativeElement;
+    if (this.myContactForm.valid) {
+      let fd = new FormData();
+      fd.append('name', this.myContactForm.get('name')?.value);
+      fd.append('email', this.myContactForm.get('email')?.value);
+      fd.append('message', this.myContactForm.get('message')?.value);
 
-    nameField.disabled = true;
-    emailField.disabled = true;
-    messageField.disabled = true;
+      try {
+        const response = await fetch('https://formspree.io/f/xovadpqr', {
+          method: 'POST',
+          body: fd,
+          headers: {
+            Accept: 'application/json',
+          },
+        });
 
-    // animation anzeigen
-    let fd = new FormData();
-    fd.append('name', nameField.value);
-    fd.append('email', nameField.value);
-    fd.append('message', messageField.value);
-    //senden
-    await fetch('https://benjamin-tietz.com/send_mail.php',
-      {
-        method: 'POST',
-        body: fd
+        if (response.ok) {
+          this.successMessage.nativeElement.classList.add('success');
+          setTimeout(() => {
+            this.successMessage.nativeElement.classList.remove('success');
+          }, 2000);
+
+          this.myContactForm.reset();
+        } else {
+          console.error('Form submission error', response.statusText);
+        }
+      } catch (error) {
+        console.error('Form submission error', error);
       }
-      );
-
-      this.successMessage.nativeElement.classList.add('success');
-    setTimeout(() => {
-      this.successMessage.nativeElement.classList.remove('success');
-      }, 2000);
-
-    if (this.myForm instanceof FormGroup) {
-      // Setze das Formular zurück
-      this.myForm.reset();
     }
-    nameField.disabled = false;
-    emailField.disabled = false;
-    messageField.disabled = false;
-    this.isSendButtonActive = false;
-    console.log('isSendButtonActive: ', this.isSendButtonActive);
-   }
+  }
 }
