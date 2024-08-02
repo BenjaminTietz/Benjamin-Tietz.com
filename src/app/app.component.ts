@@ -69,10 +69,8 @@ export class AppComponent implements OnInit {
     });
   }
 
-  handleToggleLanguage(isEnglish: boolean) {
-    this.showEnglishVersion = isEnglish;
-    this.showGermanVersion = !isEnglish;
-
-    console.log('Language toggled to: ' + (isEnglish ? 'English' : 'German'));
+  onLanguageToggled(showEnglish: boolean) {
+    this.showEnglishVersion = showEnglish;
+    this.showGermanVersion = !showEnglish;
   }
 }

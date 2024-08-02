@@ -17,11 +17,11 @@
       <li><a (click)="underlineNav($event)" href="#portfolio">Portfolio</a></li>
       <div class="language-selection">
         @if (this.showGermanVersion) {
-        <div class="icon-container">
+        <div class="icon-container" (click)="this.toggleLanguage('english')">
           <img src="assets/img/german.png" alt="german_icon">
         </div>
         } @else {
-        <div class="icon-container">
+        <div class="icon-container" (click)="this.toggleLanguage('german')">
           <img src="assets/img/english.png" alt="english_icon">
         </div>
         }

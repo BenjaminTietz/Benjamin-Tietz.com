@@ -22,8 +22,15 @@ export class HeaderComponent {
 
   constructor(private elementRef: ElementRef, private router: Router) {}
 
-  onToggleLanguage(isEnglish: boolean) {
-    this.languageToggled.emit(isEnglish);
+  toggleLanguage(language: string) {
+    if (language === 'german') {
+      this.showEnglishVersion = false;
+      this.showGermanVersion = true;
+    } else if (language === 'english') {
+      this.showEnglishVersion = true;
+      this.showGermanVersion = false;
+    }
+    this.languageToggled.emit(this.showEnglishVersion);
   }
 
   toggleMenu() {

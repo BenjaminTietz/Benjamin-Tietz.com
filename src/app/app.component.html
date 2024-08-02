@@ -3,7 +3,8 @@
   <app-mobile-menu></app-mobile-menu>
   @if (this.showStartscreen) { <app-startscreen></app-startscreen>}
 
-  @if (this.showAbout) { <app-about></app-about>}
+  @if (this.showAbout) { <app-about [showEnglishVersion]="showEnglishVersion" [showGermanVersion]="showGermanVersion">
+  </app-about>}
 
   @if (this.showSkills) { <app-skills></app-skills>}
 
