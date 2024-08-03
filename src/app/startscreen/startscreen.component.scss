@@ -124,7 +124,7 @@ button {
   }
 }
 
-.align-center {
+.btn-container {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -173,6 +173,15 @@ button {
   font-size: 23px;
   display: flex;
   transform: rotate(90deg);
+}
+
+.background-scroll {
+  position: absolute;
+  bottom: -20svh;
+  right: 0;
+  width: 20svw;
+  height: 40svh;
+  z-index: 4;
 }
 
 .purple-line {
@@ -284,11 +293,10 @@ button {
   }
 
   .portrait-background {
-    width: 646px;
-    height: 448.11px;
-    right: 75px;
+    position: absolute;
+    width: 100svw;
+    height: 100svh;
   }
-
 
 
   .text-wrapper {
@@ -319,14 +327,14 @@ button {
     align-items: center;
   }
 
-  .align-center {
+  .btn-container {
     margin-top: 20px;
   }
 
   .wave {
     position: absolute;
-    top: 62vh;
-    max-height: 282px;
+    top: 40svh;
+    max-height: 70svh;
     width: 100% !important;
     z-index: 4;
   }
@@ -341,7 +349,9 @@ button {
 }
 
 @media screen and (max-width: 850px) {
-
+  .wave {
+    top: 50svh;
+  }
 
   .my-email {
     display: none;
@@ -353,7 +363,6 @@ button {
 @media only screen and (max-width: 600px) {
 
   .text-wrapper {
-    margin-top: 70px;
     width: 353px;
     height: 89px;
     gap: 10px;
@@ -386,6 +395,41 @@ button {
 }
 
 @media only screen and (max-width: 450px) {
+  .social-box {
+    margin-top: 16svh;
+  }
+
+  .wave {
+    top: 50svh;
+    max-height: 80svh;
+  }
+
+  .portrait-container {
+    height: 64svh;
+  }
+
+  .startscreen-right {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .btn-container {
+    margin-top: unset;
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: unset;
+      width: 133px !important;
+      height: 49px !important;
+      padding: 15px 30px 15px 30px !important;
+      font-size: 23px !important;
+      font-weight: 400 !important;
+      line-height: 27.6px !important;
+      text-wrap: nowrap;
+    }
+  }
 
   .text-wrapper {
     display: flex;
@@ -393,6 +437,7 @@ button {
     align-items: center;
     gap: 20px;
     z-index: 6;
+    margin-top: unset;
 
     .text-horizontal {
       display: flex;
