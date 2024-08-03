@@ -7,11 +7,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
+  height: 100svh;
+  width: 100svw;
   max-width: 1440px;
-  margin-top: 104px;
-  margin-left: 24px;
+  box-sizing: border-box;
 }
 
 .home-about {
@@ -20,8 +19,8 @@
   justify-content: center;
   align-items: center;
   height: 90%;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 50px 0;
+  box-sizing: content-box;
 }
 
 button {
@@ -53,10 +52,11 @@ button {
   align-items: center;
   position: relative;
   z-index: 4;
+  height: fit-content;
+  width: 100%;
 
   img {
-    max-width: 115%;
-    max-height: 1000px;
+    max-height: 80svh;
   }
 }
 
@@ -69,8 +69,8 @@ button {
 
 .portrait-background {
   position: absolute;
-  width: 646px;
-  height: 705px;
+  width: 60svw;
+  height: 100svh;
 }
 
 .startscreen-right {
@@ -141,6 +141,9 @@ button {
   height: max-content;
   z-index: 5;
   white-space: nowrap;
+  position: absolute;
+  bottom: 3svh;
+  right: 0;
 
   img {
     width: 24px;
@@ -184,11 +187,14 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: -300px;
+  height: 10svh;
+  width: 100svw;
+  margin-top: -10svh;
+
 }
 
+
 .social-box {
-  margin-top: 100px;
   display: flex;
   align-items: center;
   gap: 42px;
@@ -222,28 +228,27 @@ button {
   font-weight: 400;
   line-height: 27.6px;
   text-decoration: none;
+  transition: transform 0.175s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    color: $light-blue;
+  }
 }
 
 .wave {
   position: absolute;
-  top: 925px;
+  top: 30svh;
   left: 0;
-  width: 100% !important;
-  max-height: 450px;
-  height: auto;
+  width: 100svw;
   z-index: 4;
+  aspect-ratio: auto;
 }
 
-@media screen and (min-width: 1600px) {
-  .startscreen-wrapper {
-    max-width: 100%;
-  }
-}
+
 
 @media screen and (max-width: 1600px) {
-  .startscreen-wrapper {
-    margin-top: 56px;
-  }
+
 
   .headline-1 {
     font-size: calc(32px + 2vh) !important;
@@ -258,42 +263,12 @@ button {
     font-size: calc(29px + 2vh) !important;
   }
 
-  .wave {
-    top: 68vh;
-  }
-
-  .startscreen-bottom {
-    margin-top: -220px;
-    padding-bottom: 32px;
-  }
-
-  .portrait-container {
-    img {
-      max-height: 800px;
-    }
-  }
 }
 
-@media screen and (max-width: 1300px) {
-  .startscreen-wrapper {
-    margin-left: unset;
-    margin-top: 40px;
-  }
-
-  .startscreen-bottom {
-    margin-top: -198px;
-  }
-
-  .wave {
-    top: 68vh;
-    max-height: 320px;
-  }
-}
 
 @media screen and (max-width: 1100px) {
   .startscreen-wrapper {
-    margin-top: 32px;
-    height: 86vh;
+    height: 90svh !important;
   }
 
   .startscreen-right {
@@ -314,16 +289,7 @@ button {
     right: 75px;
   }
 
-  .portrait-container {
-    margin-top: unset;
-    max-height: 800px;
-    margin-top: 32px;
 
-    img {
-      max-width: 100%;
-      max-height: 80%;
-    }
-  }
 
   .text-wrapper {
     margin-top: 80px;
@@ -375,47 +341,16 @@ button {
 }
 
 @media screen and (max-width: 850px) {
-  .startscreen-wrapper {
-    margin-top: -80px;
-    height: 90vh;
-    margin-left: unset;
-  }
 
-  .startscreen-right {
-    bottom: -40px;
-  }
 
   .my-email {
     display: none;
   }
 
-  .wave {
-    top: 53vh;
-  }
 
-  .social-box {
-    margin-top: 120px;
-  }
 }
 
 @media only screen and (max-width: 600px) {
-  .startscreen-wrapper {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .portrait {
-    position: relative;
-    height: 90%;
-    width: 90%;
-    object-fit: cover;
-  }
-
-  .portrait-background {
-    width: 646px;
-    height: 448.11px;
-    right: 15px;
-  }
 
   .text-wrapper {
     margin-top: 70px;
@@ -439,10 +374,6 @@ button {
     }
   }
 
-  .wave {
-    top: 710px;
-  }
-
   .home-about {
     display: flex;
     flex-direction: column;
@@ -452,43 +383,9 @@ button {
   .scroll-down-alert {
     display: none;
   }
-
-  .startscreen-right {
-    bottom: 20px;
-  }
-
-  .portrait-container {
-    height: 90%;
-  }
 }
 
 @media only screen and (max-width: 450px) {
-  .startscreen-wrapper {
-    margin-top: 0;
-  }
-
-  .portrait-container {
-    height: 650px;
-    max-width: 100%;
-  }
-
-  .align-center {
-    margin-top: -30px;
-  }
-
-  .wave {
-    top: 60vh;
-    max-height: 216px;
-  }
-
-  .startscreen-right {
-    bottom: -12px;
-  }
-
-  .home-about {
-    padding-right: 0;
-    padding-left: 0;
-  }
 
   .text-wrapper {
     display: flex;
@@ -522,90 +419,6 @@ button {
       margin-top: -60px;
       white-space: wrap;
     }
-  }
-
-  button {
-    height: 40px;
-  }
-
-  .social-box {
-    gap: 30px;
-  }
-
-  .startscreen-bottom {
-    margin-top: -100px;
-  }
-}
-
-@media only screen and (max-width: 380px) {
-  .wave {
-    top: 56vh;
-    max-height: 216px;
-  }
-
-  .portrait-container {
-    height: 500px;
-  }
-
-  .align-center {
-    margin-top: 0;
-  }
-
-  button {
-    margin-top: unset;
-  }
-
-  .startscreen-right {
-    bottom: 40px;
-  }
-
-  .startscreen-bottom {
-    margin-top: -168px;
-  }
-
-  .text-wrapper {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 4px;
-    z-index: 6;
-
-    .text-horizontal {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-      z-index: 5;
-      position: relative;
-      margin-left: -150px;
-    }
-
-    .headline-1 {
-      font-size: calc(32px - 3.5vw) !important;
-      margin-top: 10px;
-    }
-
-    .headline-2 {
-      font-size: calc(45px - 4.5vw) !important;
-      white-space: wrap;
-    }
-
-    .headline-3 {
-      font-size: calc(29px - 2.5vw) !important;
-      margin-top: -60px;
-      white-space: wrap;
-    }
-  }
-
-  .social-box {
-    margin-top: 160px;
-  }
-}
-
-@media only screen and (max-width: 340px) {
-
-  .startscreen-right {
-    margin-left: 30px;
   }
 
 }
