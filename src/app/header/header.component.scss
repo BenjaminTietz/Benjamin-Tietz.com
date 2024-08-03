@@ -23,7 +23,7 @@ header {
         z-index: 3;
     }
 
-    .navbar-logo{
+    .navbar-logo {
         color: white;
         text-decoration: none;
         font-weight: 800;
@@ -86,7 +86,7 @@ header {
         border: 5px solid transparent;
         transition: transform 175ms ease-in-out, border 175ms ease-in-out;
 
-        &:hover  {
+        &:hover {
             transform: scale(1.1);
             border: 5px solid $light-blue;
         }
@@ -106,21 +106,21 @@ header {
 
 .purple-underline {
     margin-top: 4px;
-    text-decoration: underline!important;
-    text-decoration-color: $purple!important;
-    text-decoration-thickness: 3px!important;
+    text-decoration: underline !important;
+    text-decoration-color: $purple !important;
+    text-decoration-thickness: 3px !important;
     transition: 225ms ease-in-out;
 }
 
 .buger-menu-wrapper {
-    display: none!important;
-    width:100px!important;
+    display: none !important;
+    width: 100px !important;
     height: 100px;
     justify-content: center;
     align-items: center;
 }
 
-.buger-menu{
+.buger-menu {
     width: 30px;
     height: 30px;
     margin: 4px;
@@ -171,10 +171,10 @@ header {
 }
 
 .mobile-menu-wrapper {
-    top:100px;
+    top: 100px;
     left: 0;
     position: absolute;
-    display: flex; 
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -185,8 +185,8 @@ header {
     z-index: 8;
     transform: translateX(100vw);
     transition: all 225ms ease-in-out;
+
     .nav-mobile {
-        height: 100vh;
         width: 100vw;
         max-width: 100%;
         display: flex;
@@ -197,16 +197,16 @@ header {
         list-style: none;
         padding-left: 0px;
     }
-    
+
     .nav-mobile * {
         box-sizing: border-box;
         transition: all .35s ease;
     }
-    
+
     .nav-mobile li {
         padding-inline-start: 0;
     }
-    
+
     .nav-mobile a {
         padding: .5em .8em;
         color: $white;
@@ -236,11 +236,12 @@ header {
             padding: 0 0 0 30px;
         }
     }
+
     .nav {
-        display: none!important;
-    }  
-    
+        display: none !important;
+    }
+
     .buger-menu-wrapper {
-        display: flex!important;
+        display: flex !important;
     }
 }
