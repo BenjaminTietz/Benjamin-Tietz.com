@@ -12,17 +12,23 @@
     </a>
 
     <ul class="nav">
+      @if (this.showEnglishVersion) {
       <li><a (click)="underlineNav($event)" href="#aboutMe">About me</a></li>
       <li><a (click)="underlineNav($event)" href="#skills">My skills</a></li>
       <li><a (click)="underlineNav($event)" href="#portfolio">Portfolio</a></li>
+      } @else {
+      <li><a (click)="underlineNav($event)" href="#aboutMe">Über mich</a></li>
+      <li><a (click)="underlineNav($event)" href="#skills">Meine Skills</a></li>
+      <li><a (click)="underlineNav($event)" href="#portfolio">Portfolio</a></li>
+      }
       <div class="language-selection">
         @if (this.showGermanVersion) {
         <div class="icon-container" (click)="this.toggleLanguage('english')">
-          <img src="assets/img/german.png" alt="german_icon">
-        </div>
-        } @else {
-        <div class="icon-container" (click)="this.toggleLanguage('german')">
           <img src="assets/img/english.png" alt="english_icon">
+        </div>
+        } @if (this.showEnglishVersion) {
+        <div class="icon-container" (click)="this.toggleLanguage('german')">
+          <img src="assets/img/german.png" alt="german_icon">
         </div>
         }
       </div>

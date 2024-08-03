@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
+import { Component, ViewChild, ElementRef, OnInit, Input } from '@angular/core';
 import {
   FormGroup,
   FormBuilder,
@@ -14,6 +14,8 @@ import {
 })
 export class ContactMeComponent implements OnInit {
   myContactForm!: FormGroup;
+  @Input() showEnglishVersion!: boolean;
+  @Input() showGermanVersion!: boolean;
 
   @ViewChild('successMessage')
   successMessage!: ElementRef<HTMLParagraphElement>;

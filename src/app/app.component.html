@@ -1,21 +1,29 @@
 <div class="page-wrapper">
-  @if(this.showHeader) {<app-header></app-header>}
+  @if(this.showHeader) { <app-header [showEnglishVersion]="showEnglishVersion" [showGermanVersion]="showGermanVersion"
+    (languageToggled)="onLanguageToggled($event)"></app-header>}
   <app-mobile-menu></app-mobile-menu>
-  @if (this.showStartscreen) { <app-startscreen></app-startscreen>}
+  @if (this.showStartscreen) { <app-startscreen [showEnglishVersion]="showEnglishVersion"
+    [showGermanVersion]="showGermanVersion"></app-startscreen>}
 
-  @if (this.showAbout) { <app-about [showEnglishVersion]="showEnglishVersion" [showGermanVersion]="showGermanVersion">
-  </app-about>}
+  @if (this.showAbout) { <app-about [showEnglishVersion]="showEnglishVersion"
+    [showGermanVersion]="showGermanVersion"></app-about>}
 
-  @if (this.showSkills) { <app-skills></app-skills>}
+  @if (this.showSkills) { <app-skills [showEnglishVersion]="showEnglishVersion"
+    [showGermanVersion]="showGermanVersion"></app-skills>}
 
-  @if (this.showPortfolio) { <app-portfolio></app-portfolio>}
+  @if (this.showPortfolio) { <app-portfolio [showEnglishVersion]="showEnglishVersion"
+    [showGermanVersion]="showGermanVersion"></app-portfolio>}
 
-  @if (this.showContactMe) { <app-contact-me></app-contact-me>}
+  @if (this.showContactMe) { <app-contact-me [showEnglishVersion]="showEnglishVersion"
+    [showGermanVersion]="showGermanVersion"></app-contact-me>}
 
-  @if (this.showImprint) { <app-imprint></app-imprint>}
+  @if (this.showImprint) { <app-imprint [showEnglishVersion]="showEnglishVersion"
+    [showGermanVersion]="showGermanVersion"></app-imprint>}
 
-  @if (this.showPrivacyPolicy) { <app-privacy-policy></app-privacy-policy>}
+  @if (this.showPrivacyPolicy) { <app-privacy-policy [showEnglishVersion]="showEnglishVersion"
+    [showGermanVersion]="showGermanVersion"></app-privacy-policy>}
 
-  @if (this.showFooter) { <app-footer></app-footer>}
+  @if (this.showFooter) { <app-footer [showEnglishVersion]="showEnglishVersion"
+    [showGermanVersion]="showGermanVersion"></app-footer>}
 
 </div>

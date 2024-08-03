@@ -42,20 +42,33 @@
         <p>Material design</p>
       </div>
     </div>
-    <img
-    class="skills-background-element"
-    src="assets/img/background-elements/background-element_1.png"
-  /><img />
+    <img class="skills-background-element" src="assets/img/background-elements/background-element_1.png" /><img />
     <div class="skills-right">
       <div class="skills-headline-wrapper">
-        <div class="skills-headline">My skills</div>
+        @if (this.showEnglishVersion) { <div class="skills-headline">My skills</div>} @else { <div
+          class="skills-headline">Meine Skills</div>}
+
         <div class="short-purple-line"></div>
       </div>
-      <p>I have successfully completed my training at a TÜV-certified training facility.</p>
-      <p>During my training as a frontend developer, I was able to gain experience with various technologies such as JavaScript / TypeScript & Angular.</p>
-      <p>I was able to realize several projects. I particularly enjoyed working in a team. I gained in-depth experience and expanded my knowledge.</p>
-      <button routerLink="/contact-me" fragment="contactMe" class="btn-desptop">Get in touch</button>
+      @if (this.showEnglishVersion) { <p>I have successfully completed my training at a TÜV-certified training facility.
+      </p>
+      <p>During my training as a frontend developer, I was able to gain experience with various technologies such as
+        JavaScript / TypeScript & Angular.</p>
+      <p>I was able to realize several projects. I particularly enjoyed working in a team. I gained in-depth experience
+        and expanded my knowledge.</p>} @else { <p>Ich habe meine Ausbildung an einem TÜV-zertifizierten
+        Ausbildungsbetrieb erfolgreich abgeschlossen.</p>
+      <p>Während meiner Ausbildung zum Frontend-Entwickler konnte ich Erfahrungen mit verschiedenen Technologien wie
+        JavaScript / TypeScript & Angular sammeln.</p>
+      <p>Ich konnte mehrere Projekte realisieren. Besonders viel Spaß hat mir die Arbeit im Team gemacht. Ich konnte
+        vertiefte Erfahrungen sammeln
+        und mein Wissen erweitern.</p>}
+
+      @if (this.showEnglishVersion) { <button routerLink="/contact-me" fragment="contactMe" class="btn-desptop">Get in
+        touch</button>}
+      @else { <button routerLink="/contact-me" fragment="contactMe" class="btn-desptop">Kontaktieren</button>}
     </div>
-    <button class="btn-mobile">Get in touch</button>
+    @if (this.showEnglishVersion) { <button class="btn-mobile">Get in touch</button>}
+    @else { <button class="btn-mobile">Kontaktieren</button>}
+
   </div>
 </section>

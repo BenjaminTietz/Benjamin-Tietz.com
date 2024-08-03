@@ -1,4 +1,5 @@
 <section routerLink="/" id="contactMe">
+  @if (this.showEnglishVersion) {
   <div class="contact-wrapper">
     <div class="success-message" #successMessage>
       <p>Your message has been sent successfully!</p>
@@ -19,7 +20,6 @@
             href="mailto:mail@benjamin-tietz.com"><b>mail&#64;benjamin-tietz.com</b></a><br><br> I will get back to you
           as soon as possible!</span>
       </div>
-      <!-- contact-form.component.html -->
       <div class="contact-formular-right">
         <form (ngSubmit)="sendMail()" [formGroup]="myContactForm" action="https://formspree.io/f/xovadpqr"
           method="POST">
@@ -85,4 +85,96 @@
       </div>
     </div>
   </div>
+  } @else {
+  <div class="contact-wrapper">
+    <div class="success-message" #successMessage>
+      <p>Your message has been sent successfully!</p>
+    </div>
+    <img class="contact-background-element" src="assets/img/background-elements/background-element_4.png" /><img />
+    <div class="headline-container">
+      <div class="small-purple-line"></div>
+      <h2>Kontakt</h2>
+    </div>
+
+    <div class="contact-formular-wrapper">
+      <div class="contact-formular-left">
+        <p>Sie haben ein Problem zu lösen?</p> <span>Ich freue mich, mit Ihnen in Kontakt zu treten! Lassen Sie uns
+          zusammenarbeiten, um etwas Außergewöhnliches zu schaffen. Als Frontend-Entwickler besteht meine Leidenschaft
+          darin, innovative Ideen zum Leben zu erwecken. Ich freue mich darauf, gemeinsam Visionen in ein
+          bemerkenswertes Produkt umzusetzen, das ein außergewöhnliches Benutzererlebnis bietet. Lassen Sie uns
+          gemeinsam Großartiges schaffen!</span> <span>Sie brauchen einen Frontend-Entwickler? Kontaktieren Sie mich
+          über dieses Formular oder schreiben Sie mir eine E-Mail <a
+            href="mailto:mail@benjamin-tietz.com"><b>mail&#64;benjamin-tietz.com</b></a><br>
+          <br> Ich werde mich so schnell wie möglich bei Ihnen melden!
+        </span>
+      </div>
+      <div class="contact-formular-right">
+        <form (ngSubmit)="sendMail()" [formGroup]="myContactForm" action="https://formspree.io/f/xovadpqr"
+          method="POST">
+          <input required class="from-input relative" placeholder="Dein Name" type="text" formControlName="name"
+            name="name" />
+          @if (myContactForm.get('name')?.dirty && (hasError('name', 'required') || hasError('name', 'fullName'))) {
+          <span class="error-msg">
+            *Bitte Vor-und Nachnamen eintragen!
+          </span>
+          }
+          <input required class="from-input relative" placeholder="Deine E-Mail" type="email" formControlName="email"
+            name="email" />
+          @if (myContactForm.get('email')?.dirty && hasError('email', 'required')) {
+          <span class="error-msg">
+            *Bitte geben Sie eine gültige E-Mail-Adresse ein!
+          </span>
+          }
+          @if (myContactForm.get('email')?.dirty && hasError('email', 'email')) {
+          <span class="error-msg">
+            *Bitte geben Sie eine gültige E-Mail-Adresse ein!
+          </span>
+          }
+
+          <textarea required class="from-message relative" placeholder="Deine Nachricht" type="text"
+            formControlName="message" name="message"></textarea>
+          @if (myContactForm.get('message')?.dirty && hasError('message', 'required')) {
+          <span class="error-msg">
+            *Bitte geben Sie eine Nachricht ein!
+          </span>
+          }
+
+          <div class="checkbox-container">
+            <input required class="from-checkbox relative" type="checkbox" formControlName="privacyPolicy"
+              name="privacyPolicy" />
+            <span>
+              Ich habe die <a class="privacy-policy" routerLink="/privacy-policy"
+                href="#privacy-policy">Datenschutzrichtlinie</a> gelesen und stimme der beschriebenen Verarbeitung
+              meiner Daten zu.
+            </span>
+          </div>
+          @if (myContactForm.get('privacyPolicy')?.dirty && hasError('privacyPolicy', 'required')) {
+          <span class="error-msg">
+            *Bitte akzeptieren Sie die Datenschutzbestimmungen!
+          </span>
+          }
+
+          <div class="btn-send-container">
+            <button class="send-btn" [ngClass]="{'send-btn-active': myContactForm.valid}"
+              [disabled]="!myContactForm.valid">
+              Nachricht senden :)
+            </button>
+          </div>
+        </form>
+
+        <div class="go-up-btn-container">
+          <a class="go-up-btn" href="#home">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="go-up-btn"
+                d="M11 7.828L6.34302 12.485C5.95255 12.8755 5.31948 12.8755 4.92902 12.485C4.53855 12.0945 4.53855 11.4615 4.92902 11.071L11.2929 4.70711C11.6834 4.31658 12.3166 4.31658 12.7071 4.70711L19.071 11.071C19.4615 11.4615 19.4615 12.0945 19.071 12.485C18.6806 12.8755 18.0475 12.8755 17.657 12.485L13 7.828L13 19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19L11 7.828Z"
+                fill="white" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  }
+
 </section>

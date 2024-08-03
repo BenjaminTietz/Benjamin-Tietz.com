@@ -1,82 +1,193 @@
 <section routerLink="/" id="portfolio">
   <div class="portfolio-wrapper">
-    <img
-          class="background-element-4"
-          src="assets/img/background-elements/background-element_4.png"
-        />
-    <img
-          class="background-element-5"
-          src="assets/img/background-elements/background-element_5.png"
-        />
+    <img class="background-element-4" src="assets/img/background-elements/background-element_4.png" />
+    <img class="background-element-5" src="assets/img/background-elements/background-element_5.png" />
     <div class="portfolio-headline-wrapper">
       <div class="portfolio-headline">
         <div class="short-purple-line"></div>
         <h2>Portfolio</h2>
         <div class="long-purple-line"></div>
       </div>
-      <p>Explore some of my projects and make sure you give them a try.</p>
+      @if (this.showEnglishVersion) { <p>Explore some of my projects and make sure you give them a try.</p>}
+      @else { <p>Entdecken Sie einige meiner Projekte und probieren Sie sie aus.</p>}
+
     </div>
     <div class="portfolio-content-wrapper reverse">
       <img src="assets/img/projects/simple-crm.png">
       <div class="portfolio-description align-right">
-        <h3>Simple Hospitality CRM</h3>
+        @if (this.showEnglishVersion) { <h3>Simple Hospitality CRM</h3>
         <p>Angular | TypeScript | Firebase</p>
-        <span>Simple Hospitality CRM is a user-friendly Customer Relationship Management (CRM) system designed for property management, developed using Angular, TypeScript, and Firebase as the database. This system provides an efficient solution for managing various properties, bookings, and associated statistics.
+        <span>Simple Hospitality CRM is a user-friendly Customer Relationship Management (CRM) system designed for
+          property management, developed using Angular, TypeScript, and Firebase as the database. This system provides
+          an efficient solution for managing various properties, bookings, and associated statistics.
           <br><br>
-          Using Firebase Authentication, property owners can create access credentials for booking agents, enabling secure logins to the system. Once logged in, users are greeted with a clear and concise dashboard displaying key statistics, including property-specific income, booking volumes, and upcoming check-in and check-out dates for guests.
+          Using Firebase Authentication, property owners can create access credentials for booking agents, enabling
+          secure logins to the system. Once logged in, users are greeted with a clear and concise dashboard displaying
+          key statistics, including property-specific income, booking volumes, and upcoming check-in and check-out dates
+          for guests.
           <br><br>
-          The core functionality of Simple Hospitality CRM is based on the CRUD (Create, Read, Update, Delete) principle. Users have the flexibility to create individual property listings, manage bookings by associating them with available properties, and update or delete records as needed. The system empowers property owners and booking agents to efficiently handle their hospitality business with a streamlined approach to data management.
+          The core functionality of Simple Hospitality CRM is based on the CRUD (Create, Read, Update, Delete)
+          principle. Users have the flexibility to create individual property listings, manage bookings by associating
+          them with available properties, and update or delete records as needed. The system empowers property owners
+          and booking agents to efficiently handle their hospitality business with a streamlined approach to data
+          management.
           <br><br>
-          Whether you're a property owner looking to manage bookings or a booking agent handling reservations, Simple Hospitality CRM simplifies the process, providing a comprehensive tool to organize, analyze, and optimize property-related data.</span>
-      <div class="btn-container">
-        <a href="https://simple-crm.benjamin-tietz.com/index.html" target="_blank"><button class="btn-live-test">Live test</button></a>
-        <a href="https://github.com/BenjaminTietz/hospitality-crm" target="_blank"><button class="btn-github">Github</button></a>
-      </div>
+          Whether you're a property owner looking to manage bookings or a booking agent handling reservations, Simple
+          Hospitality CRM simplifies the process, providing a comprehensive tool to organize, analyze, and optimize
+          property-related data.</span>}
+
+        @else {<h3>Simple Hospitality CRM</h3>
+        <p>Angular | TypeScript | Firebase</p>
+        <span>Simple Hospitality CRM ist ein benutzerfreundliches Customer Relationship Management (CRM)-System für die
+          Immobilienverwaltung, das mit Angular, TypeScript und Firebase als Datenbank entwickelt wurde. Dieses System
+          bietet eine effiziente Lösung für die Verwaltung verschiedener Immobilien, Buchungen und zugehöriger
+          Statistiken.
+          <br><br>
+          Mithilfe der Firebase-Authentifizierung können Immobilienbesitzer Zugangsdaten für Buchungsagenten erstellen
+          und so sichere Anmeldungen am System ermöglichen. Nach der Anmeldung wird den Benutzern ein klares und
+          übersichtliches Dashboard angezeigt, das wichtige Statistiken anzeigt, darunter immobilienspezifische
+          Einnahmen, Buchungsvolumen und bevorstehende Check-in- und Check-out-Daten für Gäste.
+          <br><br>
+          Die Kernfunktionalität von Simple Hospitality CRM basiert auf dem CRUD-Prinzip (Erstellen, Lesen,
+          Aktualisieren, Löschen). Benutzer haben die Flexibilität, individuelle Immobilieneinträge zu erstellen,
+          Buchungen zu verwalten, indem sie sie verfügbaren Immobilien zuordnen, und Datensätze nach Bedarf zu
+          aktualisieren oder zu löschen. Das System ermöglicht Immobilienbesitzern
+          und Buchungsagenten, ihr Gastgewerbegeschäft mit einem rationalisierten Ansatz zur
+          Datenverwaltung effizient abzuwickeln.
+          <br><br>
+          Ob Sie nun ein Immobilienbesitzer sind, der Buchungen verwalten möchte, oder ein Buchungsagent, der
+          Reservierungen bearbeitet, Simple
+          Hospitality CRM vereinfacht den Prozess und bietet ein umfassendes Tool zum Organisieren, Analysieren und
+          Optimieren
+          von immobilienbezogenen Daten.</span>}
+
+        <div class="btn-container">
+          <a href="https://simple-crm.benjamin-tietz.com/index.html" target="_blank"><button class="btn-live-test">Live
+              test</button></a>
+          <a href="https://github.com/BenjaminTietz/hospitality-crm" target="_blank"><button
+              class="btn-github">Github</button></a>
+        </div>
       </div>
     </div>
     <div class="portfolio-content-wrapper">
       <img src="assets/img/projects/join.png">
       <div class="portfolio-description align-left">
-        <h3>Join</h3>
+        @if (this.showEnglishVersion) { <h3>Join</h3>
         <p>JavaScript | HTML | CSS</p>
-        <span>"Join" is a project management tool inspired by the Kanban system, designed to streamline task organization and enhance collaboration. <br><br>
-           Developed using JavaScript, HTML, and CSS, the tool leverages a remote storage system to store and manage data efficiently. <br><br>
-           The primary features include task creation and management, the ability to add and manage contacts, and the allocation of specific tasks to individual contacts. <br><br>
-            The tool's dashboard offers a user-friendly interface with drag-and-drop functionality, allowing users to organize tasks seamlessly. <br><br> This project aims to provide a practical and intuitive solution for effective project management, fostering productivity and collaboration.</span>
-      <div class="btn-container">
-        <a href="https://join.benjamin-tietz.com/" target="_blank"><button class="btn-live-test">Live test</button></a>
-        <a href="https://github.com/BenjaminTietz/Join" target="_blank"><button class="btn-github">Github</button></a>
-      </div>
+        <span>"Join" is a project management tool inspired by the Kanban system, designed to streamline task
+          organization and enhance collaboration. <br><br>
+          Developed using JavaScript, HTML, and CSS, the tool leverages a remote storage system to store and manage data
+          efficiently. <br><br>
+          The primary features include task creation and management, the ability to add and manage contacts, and the
+          allocation of specific tasks to individual contacts. <br><br>
+          The tool's dashboard offers a user-friendly interface with drag-and-drop functionality, allowing users to
+          organize tasks seamlessly. <br><br> This project aims to provide a practical and intuitive solution for
+          effective project management, fostering productivity and collaboration.</span>}
+        @else {<h3>Join</h3>
+        <p>JavaScript | HTML | CSS</p>
+        <span>„Join“ ist ein vom Kanban-System inspiriertes Projektmanagement-Tool, das die Organisation von Aufgaben
+          rationalisieren und die Zusammenarbeit verbessern soll. <br><br>
+          Das mit JavaScript, HTML und CSS entwickelte Tool nutzt ein Remote-Speichersystem, um Daten effizient zu
+          speichern und zu verwalten. <br><br>
+          Zu den wichtigsten Funktionen gehören das Erstellen und Verwalten von Aufgaben, die Möglichkeit, Kontakte
+          hinzuzufügen und zu verwalten, sowie die Zuweisung bestimmter Aufgaben an einzelne Kontakte. <br><br>
+          Das Dashboard des Tools bietet eine benutzerfreundliche Oberfläche mit Drag-and-Drop-Funktionalität, mit der
+          Benutzer Aufgaben nahtlos organisieren können. <br><br> Ziel dieses Projekts ist es, eine praktische und
+          intuitive Lösung für effektives Projektmanagement bereitzustellen, die Produktivität und Zusammenarbeit
+          fördert.</span>}
+
+        <div class="btn-container">
+          <a href="https://join.benjamin-tietz.com/" target="_blank"><button class="btn-live-test">Live
+              test</button></a>
+          <a href="https://github.com/BenjaminTietz/Join" target="_blank"><button class="btn-github">Github</button></a>
+        </div>
       </div>
     </div>
     <div class="portfolio-content-wrapper reverse">
       <img src="assets/img/projects/el-pollo-loco.png">
       <div class="portfolio-description align-right">
+        @if (this.showEnglishVersion) {
         <h3>El Pollo Loco</h3>
         <p>JavaScript | HTML | CSS</p>
-        <span>I employed an object-oriented approach (OOP) to create an engaging hit and run game called "EL Pollo Loco" Players navigate the character Pepe through various levels, collecting salsa bottles and coins along the way. The objective is to skillfully maneuver through the level, encountering adversaries that can be eliminated by throwing collected salsa bottles and executing well-timed jumps from above. <br><br>
+        <span>I employed an object-oriented approach (OOP) to create an engaging hit and run game called "EL Pollo Loco"
+          Players navigate the character Pepe through various levels, collecting salsa bottles and coins along the way.
+          The objective is to skillfully maneuver through the level, encountering adversaries that can be eliminated by
+          throwing collected salsa bottles and executing well-timed jumps from above. <br><br>
 
-          The game features a series of challenges, with the ultimate test awaiting players at the end of each level—the formidable Endboss, a malevolent chicken that must be defeated to progress. "EL Pollo Loco" aims to deliver a fun and interactive gaming experience, combining strategic thinking, quick reflexes, and an entertaining storyline. Get ready to immerse yourself in the world of Pepe as you navigate through exciting levels, vanquishing enemies, and ultimately facing the menacing Endboss!</span>
-      <div class="btn-container">
-        <a href="https://el-pollo-loco.benjamin-tietz.com/" target="_blank"><button class="btn-live-test">Live test</button></a>
-        <a href="https://github.com/BenjaminTietz/El_Pollo_Loco" target="_blank"><button class="btn-github">Github</button></a>
-      </div>
+          The game features a series of challenges, with the ultimate test awaiting players at the end of each level—the
+          formidable Endboss, a malevolent chicken that must be defeated to progress. "EL Pollo Loco" aims to deliver a
+          fun and interactive gaming experience, combining strategic thinking, quick reflexes, and an entertaining
+          storyline. Get ready to immerse yourself in the world of Pepe as you navigate through exciting levels,
+          vanquishing enemies, and ultimately facing the menacing Endboss!</span>
+        } @else {
+        <h3>El Pollo Loco</h3>
+        <p>JavaScript | HTML | CSS</p>
+        <span>Ich habe einen objektorientierten Ansatz (OOP) verwendet, um ein spannendes Hit-and-Run-Spiel namens „EL
+          Pollo Loco“ zu erstellen.
+          Die Spieler steuern die Figur Pepe durch verschiedene Level und sammeln dabei Salsaflaschen und Münzen.
+          Das Ziel besteht darin, sich geschickt durch das Level zu manövrieren und dabei auf Gegner zu treffen, die
+          durch
+          das Werfen gesammelter Salsaflaschen und gut getimte Sprünge von oben eliminiert werden können. <br><br>
+
+          Das Spiel bietet eine Reihe von Herausforderungen, wobei die Spieler am Ende jedes Levels die ultimative
+          Prüfung erwartet – der
+          furchterregende Endboss, ein bösartiges Huhn, das besiegt werden muss, um weiterzukommen. „EL Pollo Loco“
+          zielt darauf ab, ein
+          unterhaltsames und interaktives Spielerlebnis zu bieten, das strategisches Denken, schnelle Reflexe und eine
+          unterhaltsame
+          Geschichte kombiniert. Machen Sie sich bereit, in die Welt von Pepe einzutauchen, während Sie durch aufregende
+          Levels navigieren,
+          Feinde besiegen und sich schließlich dem bedrohlichen Endboss stellen!</span>
+        }
+
+        <div class="btn-container">
+          <a href="https://el-pollo-loco.benjamin-tietz.com/" target="_blank"><button class="btn-live-test">Live
+              test</button></a>
+          <a href="https://github.com/BenjaminTietz/El_Pollo_Loco" target="_blank"><button
+              class="btn-github">Github</button></a>
+        </div>
       </div>
     </div>
     <div class="portfolio-content-wrapper">
       <img src="assets/img/projects/pokedex.png">
       <div class="portfolio-description align-left">
-        <h3>Pokédex</h3>
+        @if (this.showEnglishVersion) { <h3>Pokédex</h3>
         <p>JavaScript | HTML | CSS | Api</p>
-        <span>The "Pokédex" is a web project implemented using JavaScript, HTML, CSS, and API integration. Leveraging the Pokédex API library, the application dynamically renders Pokémon cards, allowing users to explore a comprehensive collection of Pokémon. Each card provides a snapshot of a Pokémon's essential information.
+        <span>The "Pokédex" is a web project implemented using JavaScript, HTML, CSS, and API integration. Leveraging
+          the Pokédex API library, the application dynamically renders Pokémon cards, allowing users to explore a
+          comprehensive collection of Pokémon. Each card provides a snapshot of a Pokémon's essential information.
           <br><br>
-          Users can delve deeper into the details of each Pokémon by accessing a dedicated detail view. This feature offers in-depth information, enabling users to learn more about the characteristics, abilities, and statistics of their favorite Pokémon.
+          Users can delve deeper into the details of each Pokémon by accessing a dedicated detail view. This feature
+          offers in-depth information, enabling users to learn more about the characteristics, abilities, and statistics
+          of their favorite Pokémon.
           <br><br>
-          The "Pokédex" project aims to provide an interactive and visually appealing platform for Pokémon enthusiasts to discover and explore the vast world of Pokémon. Whether you're a seasoned trainer or a newcomer to the Pokémon universe, this project offers a user-friendly experience for discovering and learning more about the fascinating creatures that inhabit the Pokémon world.</span>
-      <div class="btn-container">
-        <a href="https://pokedex.benjamin-tietz.com/index.html" target="_blank"><button class="btn-live-test">Live test</button></a>
-        <a href="https://github.com/BenjaminTietz/Pokedex" target="_blank"><button class="btn-github">Github</button></a>
-      </div>
+          The "Pokédex" project aims to provide an interactive and visually appealing platform for Pokémon enthusiasts
+          to discover and explore the vast world of Pokémon. Whether you're a seasoned trainer or a newcomer to the
+          Pokémon universe, this project offers a user-friendly experience for discovering and learning more about the
+          fascinating creatures that inhabit the Pokémon world.</span>}
+        @else {<h3>Pokédex</h3>
+        <p>JavaScript | HTML | CSS | Api</p>
+        <span>Der „Pokédex“ ist ein Webprojekt, das mit JavaScript, HTML, CSS und API-Integration implementiert wurde.
+          Die Anwendung nutzt die Pokédex-API-Bibliothek und rendert Pokémon-Karten dynamisch, sodass Benutzer eine
+          umfassende Pokémon-Sammlung erkunden können. Jede Karte bietet eine Momentaufnahme der wesentlichen
+          Informationen eines Pokémon.
+          <br><br>
+          Benutzer können tiefer in die Details jedes Pokémon eintauchen, indem sie auf eine spezielle Detailansicht
+          zugreifen. Diese Funktion bietet ausführliche Informationen, mit denen Benutzer mehr über die Eigenschaften,
+          Fähigkeiten und Statistiken ihrer Lieblings-Pokémon erfahren können.
+          <br><br>
+          Das „Pokédex“-Projekt zielt darauf ab, Pokémon-Fans eine interaktive und optisch ansprechende Plattform zu
+          bieten, mit der sie die riesige Welt der Pokémon entdecken und erkunden können. Egal, ob Sie ein erfahrener
+          Trainer oder ein Neuling im Pokémon-Universum sind, dieses Projekt bietet eine benutzerfreundliche Erfahrung,
+          um die faszinierenden Kreaturen zu entdecken und mehr über sie zu erfahren, die die Pokémon-Welt
+          bewohnen.</span>}
+
+        <div class="btn-container">
+          <a href="https://pokedex.benjamin-tietz.com/index.html" target="_blank"><button class="btn-live-test">Live
+              test</button></a>
+          <a href="https://github.com/BenjaminTietz/Pokedex" target="_blank"><button
+              class="btn-github">Github</button></a>
+        </div>
       </div>
     </div>
   </div>

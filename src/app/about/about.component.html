@@ -1,31 +1,50 @@
 <section routerLink="/" id="aboutMe">
   <div class="about-wrapper">
-    <img
-      class="background-element"
-      src="assets/img/background-elements/background-element_2.png"
-    /><img />
+    <img class="background-element" src="assets/img/background-elements/background-element_2.png" /><img />
     <div class="about-left">
+      @if (this.showEnglishVersion) {
       <div class="about-headline">About me</div>
-      <span class="about-text"
-        >Hello, my name is Benjamin. I’m a German-speaking web developer, based near Cologne, Germany. 
-        During my time as a manager of a small accommodation business in northern Croatia, I discovered my passion for IT. 
+      } @else {
+      <div class="about-headline">Über mich</div>
+      }
+      @if (this.showEnglishVersion) {
+      <span class="about-text">Hello, my name is Benjamin. I’m a German-speaking web developer, based near Cologne,
+        Germany.
+        During my time as a manager of a small accommodation business in northern Croatia, I discovered my passion for
+        IT.
         I learned how to build WordPress based homepages.
         I managed our properties using a central occupancy calendar and linked it to all booking portals.
-        Here I am - learned by doing and building applications and games - ready to be your next junior web developer. 
-        Let’s get things done - together.</span
-      >
+        Here I am - learned by doing and building applications and games - ready to be your next junior web developer.
+        Let’s get things done - together.</span>
+      } @else {
+      <span class="about-text">Hallo, mein Name ist Benjamin. Ich bin ein deutschsprachiger Webentwickler und lebe in
+        der Nähe von Köln. Während meiner Zeit als Manager eines kleinen Beherbergungsbetriebs in Nordkroatien entdeckte
+        ich meine Leidenschaft für IT. Ich lernte, wie man WordPress-basierte Homepages erstellt. Ich verwaltete unsere
+        Unterkünfte mithilfe eines zentralen Belegungskalenders und verknüpfte ihn mit allen Buchungsportalen. Hier bin
+        ich – ich habe durch praktische Erfahrung gelernt und Anwendungen und Spiele entwickelt – und bin bereit, Ihr
+        nächster Junior-Webentwickler zu werden. Lassen Sie uns die Dinge gemeinsam angehen.</span>
+
+      }
       <div class="about-personal-wrapper">
         <div class="about-personal">
           <img src="assets/img/icons/bulb desktop.png" />
-          <span
-            >I built landing pages, WordPress-based websites, and several web apps, such as a Kanban-inspired project management tool and an OOP-based jump-and-run game.</span
-          >
+          @if (this.showEnglishVersion) { <span>I built landing pages, WordPress-based websites, and several web apps,
+            such as a
+            Kanban-inspired project
+            management tool and an OOP-based jump-and-run game.</span>}
+          @else { <span>Ich habe Landingpages, WordPress-basierte Websites und mehrere Web-Apps erstellt, darunter ein
+            von Kanban inspiriertes Projektmanagement-Tool und ein OOP-basiertes Jump-and-Run-Spiel.</span>}
+
         </div>
         <div class="about-personal">
           <img src="assets/img/icons/puzzle desktop.png" />
-          <span
-            >My professional experience allows me to learn and apply new schemes and technologies fairly quickly. I also maintain clear communication and efficiency.</span
-          >
+          @if (this.showEnglishVersion) { <span>My professional experience allows me to learn and apply new schemes and
+            technologies fairly quickly. I
+            also maintain clear communication and efficiency.</span>}
+          @else { <span>Meine Berufserfahrung ermöglicht es mir, neue Systeme und Technologien relativ schnell zu
+            erlernen und anzuwenden.
+            Außerdem sorge ich für klare Kommunikation und Effizienz.</span>}
+
         </div>
       </div>
     </div>

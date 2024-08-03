@@ -46,7 +46,6 @@ export class HeaderComponent {
   underlineNav(event: Event) {
     let clickedElement = event.target as HTMLAnchorElement;
 
-    // Entfernt die Klasse von allen Elementen
     let allElements = this.elementRef.nativeElement.querySelectorAll('a');
     allElements.forEach((element: HTMLElement) => {
       element.classList.remove('purple-underline');
