@@ -37,3 +37,7 @@ html {
 .relative {
   position: relative;
 }
+
+.angular-filter {
+  filter: invert(10%) sepia(99%) saturate(3776%) hue-rotate(337deg) brightness(129%) contrast(114%);
+}
