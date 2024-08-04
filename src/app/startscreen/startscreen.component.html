@@ -2,19 +2,20 @@
   <div class="startscreen-wrapper">
     <div class="home-about">
       <div class="portrait-container">
-        <img class="portrait-background" src="assets/img/background-elements/background-element_2.png" />
-        <img class="portrait" src="assets/img/pictures-ben/ben.png" />
+        <img class="portrait-background" src="assets/img/background-elements/background-element_2.png"
+          data-aos="fade-in" data-aos-delay="300" />
+        <img class="portrait" src="assets/img/pictures-ben/ben.png" data-aos="fade-in" data-aos-delay="600" />
       </div>
       <div class="startscreen-right">
         <div class="text-wrapper">
           @if (this.showEnglishVersion) {
-          <div class="headline-1">I am</div>
-          } @else { <div class="headline-1">Ich bin</div>}
-
+          <div class="headline-1" data-aos="zoom-in">I am</div>
+          } @else { <div class="headline-1" data-aos="zoom-in">Ich bin</div>}
           <div class="text-horizontal">
-            <div class="headline-2">BENJAMIN TIETZ</div>
-            @if (this.showEnglishVersion) { <div class="headline-3">Frontend Developer</div>} @else { <div
-              class="headline-3">Frontend Entwickler</div>}
+            <div class="headline-2" data-aos="zoom-in" data-aos-delay="300">BENJAMIN TIETZ</div>
+            @if (this.showEnglishVersion) { <div class="headline-3" data-aos="fade-left" data-aos-delay="600">Frontend
+              Developer</div>} @else { <div class="headline-3" data-aos="fade-left" data-aos-delay="600">Frontend
+              Entwickler</div>}
 
           </div>
         </div>

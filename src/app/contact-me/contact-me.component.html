@@ -5,13 +5,13 @@
       <p>Your message has been sent successfully!</p>
     </div>
     <img class="contact-background-element" src="assets/img/background-elements/background-element_4.png" /><img />
-    <div class="headline-container">
+    <div class="headline-container" data-aos="fade-right">
       <div class="small-purple-line"></div>
       <h2>Contact</h2>
     </div>
 
     <div class="contact-formular-wrapper">
-      <div class="contact-formular-left">
+      <div class="contact-formular-left" data-aos="flip-up">
         <p>Have a challenge to tackle?</p>
         <span>I’m excited to connect with you! As a frontend developer, I’m passionate about transforming innovative
           ideas into outstanding web experiences. Let’s collaborate to turn your vision into a remarkable product that
@@ -19,7 +19,7 @@
             together!</strong></span>
 
       </div>
-      <div class="contact-formular-right">
+      <div class="contact-formular-right" data-aos="slide-up">
         <form (ngSubmit)="sendMail()" [formGroup]="myContactForm" action="https://formspree.io/f/xovadpqr"
           method="POST">
           <input required class="from-input relative" placeholder="Your name" type="text" formControlName="name"
@@ -96,14 +96,14 @@
     </div>
 
     <div class="contact-formular-wrapper">
-      <div class="contact-formular-left">
+      <div class="contact-formular-left" data-aos="flip-up">
         <p>Sie haben eine Herausforderung vor sich?</p>
         <span>Ich freue mich darauf, mit Ihnen in Kontakt zu treten! Als Frontend-Entwickler verwandle ich innovative
           Ideen mit Leidenschaft in herausragende Web-Erlebnisse. Lassen Sie uns zusammenarbeiten, um Ihre Vision in ein
           bemerkenswertes Produkt zu verwandeln, das sowohl in puncto Funktionalität als auch Benutzererfahrung
           herausragt. <br><br> <strong>Lassen Sie uns gemeinsam etwas Außergewöhnliches schaffen!</strong></span>
       </div>
-      <div class="contact-formular-right">
+      <div class="contact-formular-right" data-aos="slide-up">
         <form (ngSubmit)="sendMail()" [formGroup]="myContactForm" action="https://formspree.io/f/xovadpqr"
           method="POST">
           <input required class="from-input relative" placeholder="Dein Name" type="text" formControlName="name"

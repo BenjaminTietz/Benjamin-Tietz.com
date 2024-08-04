@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NavigationEnd } from '@angular/router';
+import { AosInitService } from './aos-init.service';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,11 @@ import { NavigationEnd } from '@angular/router';
 export class AppComponent implements OnInit {
   title = 'benjamin-tietz.com';
 
-  constructor(private route: ActivatedRoute, private router: Router) {}
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private aosInitService: AosInitService
+  ) {}
 
   showHeader: boolean = true;
   showStartscreen: boolean = true;
@@ -67,6 +72,7 @@ export class AppComponent implements OnInit {
         }
       }
     });
+    this.aosInitService.init();
   }
 
   onLanguageToggled(showEnglish: boolean) {
