@@ -1,7 +1,6 @@
 <div class="page-wrapper">
   @if(this.showHeader) { <app-header [showEnglishVersion]="showEnglishVersion" [showGermanVersion]="showGermanVersion"
     (languageToggled)="onLanguageToggled($event)"></app-header>}
-  <app-mobile-menu></app-mobile-menu>
   @if (this.showStartscreen) { <app-startscreen [showEnglishVersion]="showEnglishVersion"
     [showGermanVersion]="showGermanVersion"></app-startscreen>}
 

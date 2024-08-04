@@ -1,16 +1,4 @@
-//Colors
-@import "../assets/styles/colors.scss";
-
-
-body {
-    margin: 0;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    font-family: Poppins,sans-serif;
-    background: $bg-dark-blue;
-    color: $white;
-}
-
+@import "../styles.scss";
 
 .page-wrapper {
   overflow: hidden;
@@ -19,7 +7,6 @@ body {
   justify-content: center;
   align-items: center;
   background: $bg-dark-blue;
+  width: 100svw;
+
 }
-
-
-

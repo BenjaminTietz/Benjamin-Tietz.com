@@ -1,43 +1,34 @@
+/*global colors*/
+
+$light-blue: #1CDAE6;
+$bg-dark-blue: #141D2F;
+$purple: #9747FF;
+$white: #ffffff;
+$form-attention: #E61C40;
+$form-success: #70E61C;
+
 body {
   margin: 0;
+  padding: 0;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
-
-  /* ===== Scrollbar CSS ===== */
-  /* Firefox */
-  * {
-    scrollbar-width: auto;
-    scrollbar-color: #1cdae6 #141d2f;
-  }
-
-  /* Chrome, Edge, and Safari */
-  ::-webkit-scrollbar {
-    width: 16px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: #141d2f;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background-color: #1cdae6;
-    border-radius: 10px;
-    border: 0px solid #ffffff;
-  }
 }
 
-.absolute {
-  position: absolute;
+//custom scrollbar
+::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 8px;
 }
 
-.relative {
-  position: relative;
+::-webkit-scrollbar-thumb {
+  background-color: $light-blue;
+  border-radius: 8px;
 }
 
-.angular-filter {
-  filter: invert(10%) sepia(99%) saturate(3776%) hue-rotate(337deg) brightness(129%) contrast(114%);
+::-webkit-scrollbar-track {
+  background-color: $bg-dark-blue;
 }

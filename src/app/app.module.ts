@@ -6,16 +6,13 @@ import { HeaderComponent } from './header/header.component';
 import { StartscreenComponent } from './startscreen/startscreen.component';
 import { AboutComponent } from './about/about.component';
 import { ContactMeComponent } from './contact-me/contact-me.component';
-import { FixedItemsComponent } from './fixed-items/fixed-items.component';
 import { FooterComponent } from './footer/footer.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { SkillsComponent } from './skills/skills.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
-
 
 @NgModule({
   declarations: [
@@ -24,21 +21,14 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
     StartscreenComponent,
     AboutComponent,
     ContactMeComponent,
-    FixedItemsComponent,
     FooterComponent,
     ImprintComponent,
     PortfolioComponent,
     SkillsComponent,
-    MobileMenuComponent,
-    PrivacyPolicyComponent
+    PrivacyPolicyComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
