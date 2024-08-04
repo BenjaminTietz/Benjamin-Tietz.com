@@ -10,7 +10,7 @@
         <div class="text-wrapper">
           @if (this.showEnglishVersion) {
           <div class="headline-1" data-aos="zoom-in">I am</div>
-          } @else { <div class="headline-1" data-aos="zoom-in">Ich bin</div>}
+          } @else { <div class="headline-1-ger" data-aos="zoom-in">Ich bin</div>}
           <div class="text-horizontal">
             <div class="headline-2" data-aos="zoom-in" data-aos-delay="300">BENJAMIN TIETZ</div>
             @if (this.showEnglishVersion) { <div class="headline-3" data-aos="fade-left" data-aos-delay="600">Frontend
@@ -21,10 +21,15 @@
         </div>
         <div class="btn-container">
           @if (this.showEnglishVersion) { <button routerLink="/contact-me" fragment="contactMe">Let´s talk!</button>}
-          @else { <button routerLink="/contact-me" fragment="contactMe">Lass uns reden!</button>}
+          @else { <button class="button-ger" routerLink="/contact-me" fragment="contactMe">Lass uns reden!</button>}
 
         </div>
       </div>
+    </div>
+    <div class="scroll-down-alert">
+      @if (this.showEnglishVersion) {<div class="scroll-down-text">Scroll down</div>}
+      @else { <div class="scroll-down-text">Scroll runter</div>}
+      <img class="scroll-down-animation" src="assets/img/icons/arrow-down-line.png" />
     </div>
   </div>
   <img class="wave" src="assets/img/background-elements/wave.png" />
@@ -41,11 +46,6 @@
         <img class="icon linkedin" src="assets/img/icons/linkedin.png" />
       </a>
       <a class="my-email" href="mailto:mail@benjamin-tietz.com">mail&#64;benjamin-tietz.com</a>
-    </div>
-    <div class="scroll-down-alert">
-      @if (this.showEnglishVersion) {<div class="scroll-down-text">Scroll down</div>}
-      @else { <div class="scroll-down-text">Scroll runter</div>}
-      <img class="scroll-down-animation" src="assets/img/icons/arrow-down-line.png" />
     </div>
     <img class="background-scroll" src="assets/img/background-elements/background-element_6.png" />
   </div>

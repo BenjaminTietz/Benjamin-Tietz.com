@@ -9,15 +9,15 @@
       <div class="small-purple-line"></div>
       <h2>Contact</h2>
     </div>
-
     <div class="contact-formular-wrapper">
       <div class="contact-formular-left" data-aos="flip-up">
         <p>Have a challenge to tackle?</p>
-        <span>I’m excited to connect with you! As a frontend developer, I’m passionate about transforming innovative
-          ideas into outstanding web experiences. Let’s collaborate to turn your vision into a remarkable product that
+        <span>I’m excited to connect with you! As a frontend developer, I’m passionate about transforming
+          <strong>innovative</strong>
+          ideas into <strong>outstanding</strong> web experiences. <br><br> Let’s collaborate to turn your vision into a
+          remarkable product that
           excels in both functionality and user experience. <br><br> <strong>Let's create something exceptional
             together!</strong></span>
-
       </div>
       <div class="contact-formular-right" data-aos="slide-up">
         <form (ngSubmit)="sendMail()" [formGroup]="myContactForm" action="https://formspree.io/f/xovadpqr"
@@ -41,7 +41,6 @@
             *Please enter a valid email address!
           </span>
           }
-
           <textarea required class="from-message relative" placeholder="Your message" type="text"
             formControlName="message" name="message"></textarea>
           @if (myContactForm.get('message')?.dirty && hasError('message', 'required')) {
@@ -49,10 +48,10 @@
             *Please enter a message!
           </span>
           }
-
           <div class="checkbox-container">
             <input required class="from-checkbox relative" type="checkbox" formControlName="privacyPolicy"
-              name="privacyPolicy" />
+              name="privacyPolicy" id="privacyPolicy" />
+            <label for="privacyPolicy"></label>
             <span>
               I've read the <a class="privacy-policy" routerLink="/privacy-policy" href="#privacy-policy">privacy
                 policy</a> and agree to the processing of my data as outlined.
@@ -63,7 +62,6 @@
             *Please accept the privacy policy!
           </span>
           }
-
           <div class="btn-send-container">
             <button class="send-btn" [ngClass]="{'send-btn-active': myContactForm.valid}"
               [disabled]="!myContactForm.valid">
@@ -71,7 +69,6 @@
             </button>
           </div>
         </form>
-
         <div class="go-up-btn-container">
           <a class="go-up-btn" href="#home">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -94,12 +91,13 @@
       <div class="small-purple-line"></div>
       <h2>Kontakt</h2>
     </div>
-
     <div class="contact-formular-wrapper">
       <div class="contact-formular-left" data-aos="flip-up">
         <p>Sie haben eine Herausforderung vor sich?</p>
-        <span>Ich freue mich darauf, mit Ihnen in Kontakt zu treten! Als Frontend-Entwickler verwandle ich innovative
-          Ideen mit Leidenschaft in herausragende Web-Erlebnisse. Lassen Sie uns zusammenarbeiten, um Ihre Vision in ein
+        <span>Ich freue mich darauf, mit Ihnen in Kontakt zu treten! Als Frontend-Entwickler verwandle ich
+          <strong>innovative</strong> Ideen mit Leidenschaft in <strong>herausragende</strong> Web-Erlebnisse. <br><br>
+          Lassen Sie uns zusammenarbeiten, um Ihre
+          Vision in ein
           bemerkenswertes Produkt zu verwandeln, das sowohl in puncto Funktionalität als auch Benutzererfahrung
           herausragt. <br><br> <strong>Lassen Sie uns gemeinsam etwas Außergewöhnliches schaffen!</strong></span>
       </div>
@@ -125,7 +123,6 @@
             *Bitte geben Sie eine gültige E-Mail-Adresse ein!
           </span>
           }
-
           <textarea required class="from-message relative" placeholder="Deine Nachricht" type="text"
             formControlName="message" name="message"></textarea>
           @if (myContactForm.get('message')?.dirty && hasError('message', 'required')) {
@@ -133,10 +130,10 @@
             *Bitte geben Sie eine Nachricht ein!
           </span>
           }
-
           <div class="checkbox-container">
             <input required class="from-checkbox relative" type="checkbox" formControlName="privacyPolicy"
-              name="privacyPolicy" />
+              name="privacyPolicy" id="privacyPolicy" />
+            <label for="privacyPolicy"></label>
             <span>
               Ich habe die <a class="privacy-policy" routerLink="/privacy-policy"
                 href="#privacy-policy">Datenschutzrichtlinie</a> gelesen und stimme der beschriebenen Verarbeitung
@@ -148,7 +145,6 @@
             *Bitte akzeptieren Sie die Datenschutzbestimmungen!
           </span>
           }
-
           <div class="btn-send-container">
             <button class="send-btn" [ngClass]="{'send-btn-active': myContactForm.valid}"
               [disabled]="!myContactForm.valid">
@@ -156,20 +152,13 @@
             </button>
           </div>
         </form>
-
         <div class="go-up-btn-container">
           <a class="go-up-btn" href="#home">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path class="go-up-btn"
-                d="M11 7.828L6.34302 12.485C5.95255 12.8755 5.31948 12.8755 4.92902 12.485C4.53855 12.0945 4.53855 11.4615 4.92902 11.071L11.2929 4.70711C11.6834 4.31658 12.3166 4.31658 12.7071 4.70711L19.071 11.071C19.4615 11.4615 19.4615 12.0945 19.071 12.485C18.6806 12.8755 18.0475 12.8755 17.657 12.485L13 7.828L13 19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19L11 7.828Z"
-                fill="white" />
-            </svg>
+            <img class="go-up-icon" src="assets/img/icons/arrow-up-line.png" alt="arrow-up" />
           </a>
         </div>
       </div>
     </div>
   </div>
-
   }
-
 </section>

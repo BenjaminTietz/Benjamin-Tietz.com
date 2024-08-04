@@ -3,13 +3,14 @@
 .skills-wrapper {
   position: relative;
   height: 55svh;
-  width: 100svw;
+  width: 90svw;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   color: $white;
   padding-top: 20svh;
   z-index: 10;
+  padding-left: 5svw;
 }
 
 .icon-wrapper {
@@ -25,11 +26,10 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
-  width: 60vw;
+  width: 50svw;
   height: 100%;
   gap: 60px;
   z-index: 5;
-  padding-left: 100px;
 
   img {
     width: 60px;
@@ -100,7 +100,7 @@
     &:hover {
       color: white;
 
-      //<!--todo apply filter on hovering only for first-child, not for all-->
+      //<!--to-do apply filter on hovering only for first-child, not for all-->
       img:first-of-type {
         filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(0deg) brightness(180%) contrast(100%);
       }
@@ -199,15 +199,17 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
-  width: 40svw;
+  width: 47.5svw;
   height: 100%;
-  padding-left: 50px;
+  margin-right: 5svw;
   z-index: 5;
+  position: relative;
 
   .short-purple-line {
     border: 4px solid $purple;
-    width: 20%;
-    position: unset;
+    width: 10svw;
+    position: absolute;
+    right: -10svw;
     z-index: 5;
     margin-top: 54px;
   }
@@ -234,6 +236,7 @@
         font-size: 90px;
         line-height: 108px;
         align-content: end;
+        margin-right: 0.5svw;
       }
     }
 
@@ -243,7 +246,7 @@
       border-radius: 10px;
       padding: 15px, 30px, 15px, 30px;
       gap: 10px;
-      background-color: $light-blue;
+      background-color: $light-green;
       color: $white;
       font-weight: 400;
       font-size: 23px;
@@ -265,6 +268,18 @@
       font-size: 16px;
       line-height: 19.2px;
     }
+
+    h2 {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 38.4px;
+      text-align: end;
+      text-wrap: nowrap;
+
+      span {
+        color: $purple;
+      }
+    }
   }
 }
 
@@ -278,6 +293,8 @@
 @media screen and (min-width: 1600px) {}
 
 @media screen and (max-width: 1600px) {}
+
+@media screen and (min-width: 1100px) {}
 
 @media screen and (max-width: 1100px) {
   .skills-wrapper {
@@ -294,7 +311,7 @@
     flex: 0 0 75%;
     padding-left: unset;
     padding-top: 64px;
-    justify-content: center;
+    justify-content: space-evenly;
 
     img {
       width: 42px;
@@ -310,11 +327,13 @@
 
   .skills-right {
     width: 100svw;
+    padding-right: 5svw;
+    z-index: 6;
 
     .short-purple-line {
-      width: 10% !important;
-      margin-left: 16px;
       margin-top: 22px;
+      z-index: 6;
+      right: -6svw;
     }
 
     .skills-right-content {

@@ -8,5 +8,35 @@
   align-items: center;
   background: $bg-dark-blue;
   width: 100svw;
+  position: relative;
 
+}
+
+// rotate wrapper
+.rotate-wrapper {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $bg-dark-blue;
+  z-index: 55;
+
+  span {
+    color: $white;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 24px;
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
 }

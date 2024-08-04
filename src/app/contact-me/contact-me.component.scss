@@ -99,7 +99,7 @@
         gap: 10px;
 
         &:hover {
-            border-color: $light-blue;
+            border-color: $light-green;
         }
     }
 
@@ -130,7 +130,7 @@
         position: relative;
 
         &:hover {
-            border-color: $light-blue;
+            border-color: $light-green;
         }
     }
 
@@ -182,8 +182,14 @@
 }
 
 .send-btn-active {
-    background-color: $light-blue;
+    background-color: $light-green;
     cursor: pointer !important;
+    transition: 0.175 ease-in-out;
+
+    &:hover {
+        background-color: $purple;
+        transform: scale(1.05);
+    }
 }
 
 .error-msg {
@@ -193,8 +199,9 @@
 .from-checkbox {
     width: 18px;
     height: 18px;
-    border-color: $light-blue !important;
+    border-color: $light-green !important;
     border-style: 1px solid !important;
+    cursor: pointer;
 }
 
 span {
@@ -208,7 +215,13 @@ span {
     justify-content: center;
     align-items: center;
     margin-bottom: 32px;
+
+    input {
+        border: 1px solid $light-green;
+    }
 }
+
+
 
 .go-up-btn-container {
     width: 60vw;
@@ -224,16 +237,26 @@ span {
     align-items: center;
     width: 39px;
     height: 39px;
-    padding: 8px, 8px, 7px, 7px;
+    padding: 8px;
     border-radius: 41px;
-    border: solid 2px $white;
+    border: solid 2px white;
     z-index: 3;
-
+    transition: border-color 0.3s ease;
 
     &:hover {
-        border: solid 2px $light-blue;
-        transform: scale(1.1);
+        border-color: $light-green;
     }
+}
+
+.go-up-icon {
+    width: 24px;
+    height: 24px;
+    transition: filter 0.3s ease;
+}
+
+// to-do filter doesn't work 
+.go-up-btn:hover .go-up-icon {
+    filter: invert(61%) sepia(26%) saturate(3694%) hue-rotate(152deg) brightness(99%) contrast(95%);
 }
 
 .contact-background-element {

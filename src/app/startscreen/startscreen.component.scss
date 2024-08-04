@@ -27,7 +27,7 @@ button {
   border-radius: 10px;
   padding: 15px, 30px, 15px, 30px;
   gap: 10px;
-  background-color: $light-blue;
+  background-color: $light-green;
   color: $white;
   font-weight: 400;
   font-size: 23px;
@@ -45,6 +45,10 @@ button {
   }
 }
 
+.button-ger {
+  width: 185px;
+}
+
 .portrait-container {
   display: flex;
   justify-content: center;
@@ -56,6 +60,7 @@ button {
 
   img {
     max-height: 80svh;
+    transform: scaleX(-1);
   }
 }
 
@@ -64,6 +69,8 @@ button {
   z-index: 1;
   height: 100%;
   object-fit: cover;
+
+
 }
 
 .portrait-background {
@@ -85,20 +92,38 @@ button {
   align-items: flex-start;
   justify-content: flex-start;
   z-index: 10;
-  margin-left: auto;
+
 
   .text-horizontal {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: flex-end;
     z-index: 5;
     position: relative;
-    margin-left: -75px;
+    margin-left: -60px;
+
+    .headline-2 {
+      font-weight: 700;
+      font-size: 90px;
+      color: $white;
+      line-height: 108px;
+      white-space: nowrap;
+      margin-bottom: -15px;
+    }
+
+    .headline-3 {
+      font-weight: 400;
+      font-size: 58px;
+      color: $purple;
+      line-height: 69.6px;
+      white-space: nowrap;
+      margin-top: -15px;
+    }
   }
 
   .headline-1 {
-    height: 172px;
+    height: 146px;
     font-weight: 400;
     font-size: 64px;
     color: $white;
@@ -107,21 +132,17 @@ button {
     white-space: nowrap;
   }
 
-  .headline-2 {
-    font-weight: 700;
-    font-size: 90px;
+  .headline-1-ger {
+    height: 160px;
+    font-weight: 400;
+    font-size: 28px;
     color: $white;
-    line-height: 108px;
+    line-height: 43.8px;
+    transform: rotate(-90deg);
     white-space: nowrap;
+    margin-right: -28px;
   }
 
-  .headline-3 {
-    font-weight: 400;
-    font-size: 58px;
-    color: $purple;
-    line-height: 69.6px;
-    white-space: nowrap;
-  }
 }
 
 .btn-container {
@@ -142,8 +163,8 @@ button {
   z-index: 5;
   white-space: nowrap;
   position: absolute;
-  bottom: 3svh;
-  right: 0;
+  bottom: 12svh;
+  right: 3.5svw;
 
   img {
     width: 24px;
@@ -242,7 +263,7 @@ button {
 
   &:hover {
     transform: scale(1.05);
-    color: $light-blue;
+    color: $light-green;
   }
 }
 
@@ -261,20 +282,57 @@ button {
 
 
   .headline-1 {
-    font-size: calc(32px + 2vh) !important;
-    margin-top: 5px;
+    font-size: calc(32px + 1svh) !important;
+    margin-top: 7px;
   }
 
   .headline-2 {
-    font-size: calc(45px + 2vh) !important;
+    font-size: calc(45px + 1svh) !important;
   }
 
   .headline-3 {
-    font-size: calc(29px + 2vh) !important;
+    font-size: calc(29px + 1svh) !important;
   }
 
 }
 
+@media screen and (max-width: 1400px) {
+  .headline-1 {
+    font-size: calc(36px + 0.5svh) !important;
+    margin-top: 7px;
+  }
+
+  .headline-2 {
+    font-size: calc(45px + 1svh) !important;
+  }
+
+  .headline-3 {
+    font-size: calc(29px + 1svh) !important;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .wave {
+    position: absolute;
+    top: 16svh;
+    max-height: 135svh;
+    width: 100% !important;
+    z-index: 4;
+  }
+}
+
+
+@media screen and (min-width: 1100px) {
+
+  .wave {
+    position: absolute;
+    top: 40svh;
+    max-height: 80svh;
+    width: 100% !important;
+    z-index: 4;
+  }
+
+}
 
 @media screen and (max-width: 1100px) {
 
@@ -332,7 +390,7 @@ button {
 
   .wave {
     position: absolute;
-    top: 40svh;
+    top: 38svh;
     max-height: 70svh;
     width: 100% !important;
     z-index: 4;

@@ -23,7 +23,7 @@ footer {
 }
 
 .divider-blue-line {
-  border: 4px solid $light-blue;
+  border: 4px solid $light-green;
   width: 100vw;
   max-width: 100%;
 }
@@ -33,6 +33,14 @@ footer {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+}
+
+.footer-logo {
+
+  img {
+    width: 163px;
+    height: 42px;
+  }
 }
 
 .imprint {

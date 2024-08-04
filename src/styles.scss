@@ -6,12 +6,15 @@ $purple: #9747FF;
 $white: #ffffff;
 $form-attention: #E61C40;
 $form-success: #70E61C;
+$light-green: #70E61C;
+
 
 body {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
+  background-color: $bg-dark-blue;
 }
 
 html {
@@ -25,7 +28,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: $light-blue;
+  background-color: $light-green;
   border-radius: 8px;
 }
 

@@ -23,10 +23,11 @@ header {
     }
 
     .navbar-logo {
-        color: white;
-        text-decoration: none;
-        font-weight: 800;
-        font-size: 32px;
+
+        img {
+            width: 163px;
+            height: 42px;
+        }
     }
 
     .menu-img {
@@ -62,7 +63,7 @@ header {
     }
 
     .nav a:hover {
-        color: $light-blue;
+        color: $light-green;
         transition: all .35s ease;
     }
 }
@@ -87,7 +88,7 @@ header {
 
         &:hover {
             transform: scale(1.1);
-            border: 5px solid $light-blue;
+            border: 5px solid $light-green;
         }
 
 

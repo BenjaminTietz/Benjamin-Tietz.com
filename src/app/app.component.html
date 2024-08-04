@@ -1,3 +1,4 @@
+@if (!(this.isRotateDeviceVisible && !this.isMobileViewActive) ) {
 <div class="page-wrapper">
   @if(this.showHeader) { <app-header [showEnglishVersion]="showEnglishVersion" [showGermanVersion]="showGermanVersion"
     (languageToggled)="onLanguageToggled($event)"></app-header>}
@@ -24,5 +25,18 @@
 
   @if (this.showFooter) { <app-footer [showEnglishVersion]="showEnglishVersion"
     [showGermanVersion]="showGermanVersion"></app-footer>}
-
 </div>
+}
+
+<!-- Popup overlay rotate your device-->
+@if ((this.isRotateDeviceVisible && !this.isMobileViewActive) ) {
+<div class="rotate-wrapper">
+  @if (this.showGermanVersion) {
+  <span>Bitte drehe dein Gerät</span>
+  }
+  @else {
+  <span>Please rotate your device</span>
+  }
+  <img src="assets/img/icons/rotate_your_device.png" alt="rotate-device-icon" />
+</div>
+}
