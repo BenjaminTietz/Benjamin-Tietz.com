@@ -8,50 +8,72 @@
       <div class="about-headline">Über mich</div>
       }
       @if (this.showEnglishVersion) {
-      <span class="about-text">Hello, my name is Benjamin. I’m a German-speaking web developer, based near Cologne,
-        Germany.
-        During my time as a manager of a small accommodation business in northern Croatia, I discovered my passion for
-        IT.
-        I learned how to build WordPress based homepages.
-        I managed our properties using a central occupancy calendar and linked it to all booking portals.
-        Here I am - learned by doing and building applications and games - ready to be your next junior web developer.
-        Let’s get things done - together.</span>
+      <span class="about-text">Hello, I'm Benjamin – <strong>your</strong> next Junior Web Developer based near
+        Cologne, Germany. <br><br>My journey into the IT world began during my time as a manager of a small
+        accommodation business in northern Croatia. There, I discovered my passion for IT while building a website for
+        our business using WordPress. As I developed the site and implemented a central occupancy calendar that linked
+        to all booking portals, I realized how much I enjoyed working with web technologies. <br><br>Although WordPress
+        offered many possibilities, I soon recognized its limitations. This led me to pursue further education in
+        Frontend Development, allowing me to deepen my understanding of web technologies and create modern,
+        high-performance web applications. <br><br>Now, I am ready to apply my newly acquired skills to develop
+        innovative and user-friendly web solutions together with you. <strong>Let's achieve great things
+          together!</strong>
+      </span>
       } @else {
-      <span class="about-text">Hallo, mein Name ist Benjamin. Ich bin ein deutschsprachiger Webentwickler und lebe in
-        der Nähe von Köln. Während meiner Zeit als Manager eines kleinen Beherbergungsbetriebs in Nordkroatien entdeckte
-        ich meine Leidenschaft für IT. Ich lernte, wie man WordPress-basierte Homepages erstellt. Ich verwaltete unsere
-        Unterkünfte mithilfe eines zentralen Belegungskalenders und verknüpfte ihn mit allen Buchungsportalen. Hier bin
-        ich – ich habe durch praktische Erfahrung gelernt und Anwendungen und Spiele entwickelt – und bin bereit, Ihr
-        nächster Junior-Webentwickler zu werden. Lassen Sie uns die Dinge gemeinsam angehen.</span>
-
+      <span class="about-text">Hallo, ich bin Benjamin – <strong>dein</strong> nächster Junior Web Developer aus der
+        Nähe von
+        Köln. <br><br>Meine Reise in die IT-Welt begann während meiner Zeit als Manager eines kleinen
+        Beherbergungsbetriebs in Nordkroatien. Dort entdeckte ich meine Leidenschaft für IT, als ich mit WordPress eine
+        Website für
+        unser Unternehmen erstellte. Während ich die Website entwickelte und einen zentralen Belegungskalender
+        implementierte, der mit
+        allen Buchungsportalen verknüpft war, wurde mir klar, wie viel Spaß mir die Arbeit mit Webtechnologien machte.
+        <br><br>Obwohl WordPress
+        viele Möglichkeiten bot, erkannte ich bald dessen Grenzen. Dies veranlasste mich dazu, eine Weiterbildung in
+        Frontend-Entwicklung zu absolvieren, wodurch ich mein Verständnis für Webtechnologien vertiefen und moderne,
+        leistungsstarke Webanwendungen erstellen konnte. <br><br>Jetzt bin ich bereit, meine neu erworbenen Fähigkeiten
+        einzusetzen, um gemeinsam
+        innovative und benutzerfreundliche Weblösungen zu entwickeln. <strong>Lassen Sie uns gemeinsam
+          Großes erreichen!</strong>
+      </span>
       }
       <div class="about-personal-wrapper">
         <div class="about-personal">
-          <img src="assets/img/icons/location.png" /> <!--to do cant find right icon-->
-          @if (this.showEnglishVersion) { <span>Flexible in terms of working environments, I can work effectively both
-            on-site in Munich and remotely.</span>}
-          @else { <span>Da ich hinsichtlich meiner Arbeitsumgebung flexibel bin, kann ich sowohl vor Ort in München als
-            auch remote effektiv arbeiten.</span>}
+          <img src="assets/img/icons/location.png" />
+          @if (this.showEnglishVersion) {
+          <span>Flexible in terms of working environments, I can work effectively both on-site in Cologne/surroundings
+            and remotely.</span>
+          }
+          @else { <span>Flexibel in Bezug auf die Arbeitsumgebung, kann ich sowohl vor Ort in Köln/Umgebung als auch
+            remote effektiv arbeiten.</span>}
 
         </div>
         <div class="about-personal">
           <img src="assets/img/icons/bulb.png" />
-          @if (this.showEnglishVersion) { <span>I built landing pages, WordPress-based websites, and several web apps,
-            such as a
-            Kanban-inspired project
-            management tool and an OOP-based jump-and-run game.</span>}
-          @else { <span>Ich habe Landingpages, WordPress-basierte Websites und mehrere Web-Apps erstellt, darunter ein
-            von Kanban inspiriertes Projektmanagement-Tool und ein OOP-basiertes Jump-and-Run-Spiel.</span>}
+          @if (this.showEnglishVersion) { @if (this.showEnglishVersion) {
+          <span>I have built landing pages, WordPress-based websites, and several web apps. My projects include e.g. a
+            Kanban-inspired project management tool, a chat application, and an OOP-based jump-and-run game. <br><br> I
+            have successfully completed these
+            projects both independently and as part of a <strong>team.</strong></span>
+          }
+          }
+          @else { <span>Ich habe Landingpages, WordPress-basierte Websites und mehrere Web-Apps erstellt. Zu meinen
+            Projekten gehören u.a. ein
+            von Kanban inspiriertes Projektmanagement-Tool, eine Chat-Anwendung und ein OOP-basiertes
+            Jump-and-Run-Spiel. <br><br> Ich
+            habe diese
+            Projekte sowohl unabhängig als auch als Teil eines <strong>Teams</strong></span> erfolgreich abgeschlossen.}
 
         </div>
         <div class="about-personal">
           <img src="assets/img/icons/puzzle.png" />
-          @if (this.showEnglishVersion) { <span>My professional experience allows me to learn and apply new schemes and
-            technologies fairly quickly. I
-            also maintain clear communication and efficiency.</span>}
-          @else { <span>Meine Berufserfahrung ermöglicht es mir, neue Systeme und Technologien relativ schnell zu
-            erlernen und anzuwenden.
-            Außerdem sorge ich für klare Kommunikation und Effizienz.</span>}
+          @if (this.showEnglishVersion) { <span>My professional experience has equipped me with the ability to quickly
+            learn and apply new technologies and methodologies. I excel in clear communication, efficient
+            problem-solving, and adapting to both collaborative and independent work environments.</span>
+          }
+          @else { <span>Meine Berufserfahrung hat mich mit der Fähigkeit ausgestattet, neue Technologien und Methoden
+            schnell zu erlernen und anzuwenden. Ich bin hervorragend in klarer Kommunikation, effizienter Problemlösung
+            und Anpassung an sowohl kollaborative als auch unabhängige Arbeitsumgebungen.</span>}
 
         </div>
       </div>

@@ -41,7 +41,6 @@
         <img src="assets/img/icons/material-design.png" />
         <p>Material Design</p>
       </div>
-
       <div class="icon-wrapper-continually-learning icon-wrapper">
         <img src="assets/img/icons/continually-learning.png" />
         <p>Continually
@@ -63,7 +62,6 @@
         </div>
       </div>
     </div>
-
     <img class="skills-background-element" src="assets/img/background-elements/background-element_1.png" /><img />
     <div class="skills-right">
       <div class="skills-right-content">
@@ -71,21 +69,26 @@
           @if (this.showEnglishVersion) { <div class="skills-headline">My skills</div>} @else { <div
             class="skills-headline">Meine Skills</div>}
         </div>
-        @if (this.showEnglishVersion) { <p>I have successfully completed my training at a TÜV-certified training
-          facility.
-        </p>
-        <p>During my training as a frontend developer, I was able to gain experience with various technologies such as
-          JavaScript / TypeScript & Angular.</p>
-        <p>I was able to realize several projects. I particularly enjoyed working in a team. I gained in-depth
-          experience
-          and expanded my knowledge.</p>} @else { <p>Ich habe meine Ausbildung an einem TÜV-zertifizierten
-          Ausbildungsbetrieb erfolgreich abgeschlossen.</p>
-        <p>Während meiner Ausbildung zum Frontend-Entwickler konnte ich Erfahrungen mit verschiedenen Technologien wie
-          JavaScript / TypeScript & Angular sammeln.</p>
-        <p>Ich konnte mehrere Projekte realisieren. Besonders viel Spaß hat mir die Arbeit im Team gemacht. Ich konnte
-          vertiefte Erfahrungen sammeln
-          und mein Wissen erweitern.</p>}
-
+        @if (this.showEnglishVersion) { <p>I successfully completed my training at a TÜV-certified training facility,
+          where I gained hands-on <strong>experience</strong> with a range of technologies.</p>
+        <p>Throughout my training, I worked on several projects, enhancing my skills in both frontend development and
+          project execution. I particularly <strong>enjoyed</strong> collaborating within a <strong>team</strong>, which
+          allowed me to deepen my expertise
+          and expand my knowledge. My strong communication skills, problem-solving abilities, and adaptability have
+          consistently contributed to successful project outcomes, both independently and in <strong>team</strong>
+          settings.</p>
+        } @else { <p>Ich habe meine Ausbildung erfolgreich an einer TÜV-zertifizierten Ausbildungsstätte abgeschlossen,
+          wo ich praktische <strong>Erfahrung</strong> mit einer Reihe von Technologien sammeln konnte.</p>
+        <p>Während meiner Ausbildung habe ich an mehreren Projekten gearbeitet und dabei meine Fähigkeiten sowohl in der
+          Frontend-Entwicklung als auch
+          in der Projektdurchführung verbessert. Besonders <strong>gefiel</strong> mir die Zusammenarbeit in einem
+          <strong>Team</strong>, wodurch
+          ich mein Fachwissen vertiefen
+          und mein Wissen erweitern konnte. Meine ausgeprägten Kommunikationsfähigkeiten, Problemlösungskompetenzen und
+          Anpassungsfähigkeit haben
+          immer wieder zu erfolgreichen Projektergebnissen beigetragen, sowohl unabhängig als auch im
+          <strong>Team</strong>.
+        </p>}
         @if (this.showEnglishVersion) { <button routerLink="/contact-me" fragment="contactMe" class="btn-desptop">Get in
           touch</button>}
         @else { <button routerLink="/contact-me" fragment="contactMe" class="btn-desptop">Kontaktieren</button>}

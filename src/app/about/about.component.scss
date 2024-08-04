@@ -50,8 +50,8 @@
 
 .about-personal {
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
     font-size: 16px;
     font-weight: 400;
     line-height: 19.2px;
@@ -137,6 +137,7 @@
 
     .about-left {
         width: 90%;
+        padding-left: unset;
     }
 
     .about-right {
@@ -172,4 +173,10 @@
         padding-top: 48px;
     }
 
+    .about-personal {
+
+        img {
+            padding-right: 4px !important;
+        }
+    }
 }

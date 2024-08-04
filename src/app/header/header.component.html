@@ -40,18 +40,18 @@
         <li><a href="#skills" (click)="closeMenuAndScroll('#skills')">My skills</a></li>
         <li><a href="#portfolio" (click)="closeMenuAndScroll('#portfolio')">Portfolio</a></li>
         <li><a href="#contactMe" (click)="closeMenuAndScroll('#contactMe')">Contact</a></li>
+        <div class="language-selection">
+          @if (this.showGermanVersion) {
+          <div class="icon-container" (click)="this.toggleLanguage('english'); toggleMenu()">
+            <img src="assets/img/icons/english.png" alt="english_icon">
+          </div>
+          } @if (this.showEnglishVersion) {
+          <div class="icon-container" (click)="this.toggleLanguage('german'); toggleMenu()">
+            <img src="assets/img/icons/german.png" alt="german_icon">
+          </div>
+          }
+        </div>
       </ul>
-      <div class="language-selection">
-        @if (this.showGermanVersion) {
-        <div class="icon-container" (click)="this.toggleLanguage('english'); toggleMenu()">
-          <img src="assets/img/icons/english.png" alt="english_icon">
-        </div>
-        } @if (this.showEnglishVersion) {
-        <div class="icon-container" (click)="this.toggleLanguage('german'); toggleMenu()">
-          <img src="assets/img/icons/german.png" alt="german_icon">
-        </div>
-        }
-      </div>
     </div>
     <div class="buger-menu-wrapper" (click)="toggleMenu()">
       <div class="buger-menu" id="buger-menu">

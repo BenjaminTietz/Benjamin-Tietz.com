@@ -393,22 +393,28 @@ button {
 }
 
 @media only screen and (max-width: 450px) {
+  .startscreen-wrapper {
+    height: 85svh !important;
+
+  }
+
   .social-box {
-    margin-top: 16svh;
+    margin-top: 20svh;
+    gap: 32px !important;
   }
 
   .wave {
-    top: 50svh;
+    top: 45svh;
     max-height: 80svh;
   }
 
   .portrait-container {
-    height: 64svh;
+    height: 50svh;
   }
 
   .startscreen-right {
     position: absolute;
-    bottom: 0;
+    bottom: 24px;
   }
 
   .btn-container {
@@ -431,11 +437,12 @@ button {
 
   .text-wrapper {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     gap: 20px;
     z-index: 6;
     margin-top: unset;
+    width: 90svw;
 
     .text-horizontal {
       display: flex;
@@ -448,20 +455,21 @@ button {
     }
 
     .headline-1 {
-      font-size: calc(32px - 2.5vw) !important;
+      font-size: calc(32px - 5.5svw) !important;
       margin-top: 10px;
     }
 
     .headline-2 {
-      font-size: calc(45px - 2.5vw) !important;
+      font-size: calc(45px - 5.5svw) !important;
       white-space: wrap;
     }
 
     .headline-3 {
-      font-size: calc(29px - 2.5vw) !important;
+      font-size: calc(29px - 5.5svw) !important;
       margin-top: -60px;
       white-space: wrap;
     }
   }
+
 
 }

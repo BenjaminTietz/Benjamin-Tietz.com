@@ -177,8 +177,8 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
+    height: calc(100svh - 100px);
+    width: 100svw;
     max-width: 100%;
     background-color: rgba(20, 29, 47, 0.8);
     z-index: 8;
@@ -242,5 +242,8 @@ header {
 
     .buger-menu-wrapper {
         display: flex !important;
+        justify-content: flex-start;
     }
 }
+
+@media screen and (max-width: 450px) {}
