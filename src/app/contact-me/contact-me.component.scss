@@ -36,7 +36,6 @@
 }
 
 .contact-formular-wrapper {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -49,9 +48,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    width: 40svw;
-    margin-left: 50px;
-    margin-right: 50px;
+    width: 32.5svw;
+    padding-left: 2.5svw;
+    margin-right: 2.5svw;
     margin-top: -25px;
     z-index: 6;
 
@@ -80,7 +79,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 60svw;
+    width: 45svw;
+    padding-right: 2.5svw;
+    margin-left: 5svw;
 
     .from-name {
         display: flex;
@@ -307,11 +308,7 @@ a {
 
 
 
-@media screen and (min-width: 1600px) {
-    .contact-wrapper {
-        max-width: 100%;
-    }
-}
+@media screen and (min-width: 1600px) {}
 
 @media screen and (max-width: 1100px) {
     .contact-wrapper {
@@ -332,8 +329,6 @@ a {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 100vw;
-        max-width: 100%;
     }
 
     .contact-formular-left {

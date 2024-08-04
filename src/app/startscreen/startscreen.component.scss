@@ -2,13 +2,14 @@
 
 .startscreen-wrapper {
   position: relative;
-  height: 100svh;
+  height: calc(100svh - 100px);
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   box-sizing: content-box;
+  padding-bottom: 20svh;
 }
 
 .home-about {
@@ -16,8 +17,6 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 90%;
-  padding: 50px 0;
   box-sizing: content-box;
 }
 
@@ -206,6 +205,7 @@ button {
   align-items: center;
   gap: 42px;
   z-index: 5;
+  margin-bottom: 15svh;
 
   .icon {
     transition: transform 0.175s ease;
@@ -274,13 +274,11 @@ button {
 
 
 @media screen and (max-width: 1100px) {
-  .startscreen-wrapper {
-    height: 90svh !important;
-  }
+
 
   .startscreen-right {
     position: absolute;
-    bottom: -32px;
+    bottom: 24svh;
   }
 
   .portrait {
@@ -337,12 +335,8 @@ button {
     z-index: 4;
   }
 
-  .startscreen-bottom {
-    margin-top: -60px;
-  }
-
   .social-box {
-    margin-top: 160px;
+    margin-bottom: 18svh;
   }
 }
 
