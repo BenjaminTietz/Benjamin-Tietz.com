@@ -1,72 +1,75 @@
 @import "../../styles.scss";
 
 header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     height: 100px;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    z-index: 99;
+    padding: 37px 100px;
+    box-sizing: border-box;
     background-color: $bg-dark-blue;
+    z-index: 99;
+}
 
-    .logo {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 1440px;
-        width: 100%;
-        padding: 37px 100px;
-        z-index: 3;
-    }
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: $max-width;
+    z-index: 3;
+    margin: 0;
+}
 
-    .navbar-logo {
+.navbar-logo {
 
-        img {
-            width: 163px;
-            height: 42px;
-        }
-    }
-
-    .menu-img {
-        display: none;
-    }
-
-    .nav {
-        display: flex;
-        gap: 25x;
-        list-style: none;
-        white-space: nowrap;
-    }
-
-    .nav * {
-        box-sizing: border-box;
-        transition: all .35s ease;
-    }
-
-    .nav li {
-        display: inline-block;
-        list-style: outside none none;
-        padding: 0;
-    }
-
-    .nav a {
-        padding: .5em .8em;
-        color: $white;
-        position: relative;
-        text-decoration: none;
-        font-size: 23px;
-        font-weight: 400;
-        text-transform: uppercase;
-    }
-
-    .nav a:hover {
-        color: $light-green;
-        transition: all .35s ease;
+    img {
+        width: 163px;
+        height: 42px;
     }
 }
+
+.menu-img {
+    display: none;
+}
+
+.nav {
+    display: flex;
+    gap: 25x;
+    list-style: none;
+    white-space: nowrap;
+}
+
+.nav * {
+    box-sizing: border-box;
+    transition: all .35s ease;
+}
+
+.nav li {
+    display: inline-block;
+    list-style: outside none none;
+    padding: 0;
+}
+
+.nav a {
+    padding: .5em .8em;
+    color: $white;
+    position: relative;
+    text-decoration: none;
+    font-size: 23px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.nav a:hover {
+    color: $light-green;
+    transition: all .35s ease;
+}
+
 
 .language-selection {
     display: flex;
@@ -114,7 +117,7 @@ header {
 
 .buger-menu-wrapper {
     display: none !important;
-    width: 100px !important;
+    width: 50px;
     height: 100px;
     justify-content: center;
     align-items: center;
@@ -176,7 +179,7 @@ header {
     position: absolute;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: calc(100svh - 100px);
     width: 100svw;
@@ -230,11 +233,9 @@ header {
 
 
 @media screen and (max-width: 1100px) {
-
     header {
-        .logo {
-            padding: 0 0 0 30px;
-        }
+        height: 110px;
+        padding: 37px 25px;
     }
 
     .nav {
