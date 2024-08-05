@@ -96,13 +96,9 @@ export class AppComponent implements OnInit {
     const width = window.innerWidth;
     // Flag for mobile view (height greater than width)
     this.isMobileViewActive = height > width;
-
-    console.log('Mobile view active: ' + this.isMobileViewActive);
-
     // Flag to show rotate device prompt (ratio greater than 1) only for smaller screens
     const ratio = width / height;
     const isSmartPhoneScreen = width < 1024;
     this.isRotateDeviceVisible = ratio > 1.3 && isSmartPhoneScreen;
-    console.log('Rotate device visible: ' + this.isRotateDeviceVisible);
   }
 }
