@@ -12,7 +12,9 @@
           <div class="headline-1" data-aos="zoom-in">I am</div>
           } @else { <div class="headline-1-ger" data-aos="zoom-in">Ich bin</div>}
           <div class="text-horizontal">
+            @if (this.showEnglishVersion) {
             <div class="headline-2" data-aos="zoom-in" data-aos-delay="300">BENJAMIN TIETZ</div>
+            } @else { <div class="headline-2" data-aos="zoom-in" data-aos-delay="300">BENJAMIN TIETZ</div>}
             @if (this.showEnglishVersion) { <div class="headline-3" data-aos="fade-left" data-aos-delay="600">Frontend
               Developer</div>} @else { <div class="headline-3" data-aos="fade-left" data-aos-delay="600">Frontend
               Entwickler</div>}
