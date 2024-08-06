@@ -211,11 +211,11 @@ button {
 
 .background-scroll {
   position: absolute;
-  bottom: -20svh;
-  right: -30px;
-  width: 20svw;
-  height: 40svh;
-  z-index: 4;
+  bottom: 84%;
+  right: -7%;
+  width: 366px;
+  height: 490px;
+  z-index: 6;
 }
 
 .purple-line {
@@ -346,6 +346,15 @@ button {
 }
 
 @media screen and (max-width: 1100px) {
+  .background-scroll {
+    position: absolute;
+    bottom: 90%;
+    right: -7%;
+    width: 366px;
+    height: 490px;
+    z-index: 4;
+  }
+
   .text-horizontal {
     margin-top: 51px !important;
   }

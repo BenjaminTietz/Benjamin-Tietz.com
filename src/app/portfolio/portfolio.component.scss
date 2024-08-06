@@ -178,20 +178,21 @@
 
 .background-element-4 {
   position: absolute;
-  top: 350px;
+  top: 27%;
   width: 646px;
   height: 805px;
-  left: 15px;
+  left: -5%;
 }
 
 .background-element-5 {
   position: absolute;
-  top: 1250px;
+  top: 62%;
   width: 646px;
   height: 605px;
-  right: -35px;
+  right: -18%;
   z-index: 2;
 }
+
 
 @media screen and (max-width: 1100px) {
   .portfolio-wrapper {
@@ -227,17 +228,17 @@
   }
 
   .background-element-4 {
-    top: 219px;
-    width: 450px;
-    height: 697px;
-    left: -186px;
+    top: 32%;
+    width: 350px;
+    height: 397px;
+    left: -5%;
   }
 
   .background-element-5 {
-    top: 1455px;
-    width: 646px;
-    height: 605px;
-    right: -352px;
+    top: 64%;
+    width: 300px;
+    height: 300px;
+    right: -18%;
     z-index: 2;
   }
 
