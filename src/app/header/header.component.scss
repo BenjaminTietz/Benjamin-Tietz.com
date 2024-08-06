@@ -9,18 +9,22 @@ header {
     right: 0;
     left: 0;
     height: 100px;
-    padding: 37px 100px;
+    width: 100svw;
     box-sizing: border-box;
     background-color: $bg-dark-blue;
     z-index: 99;
+
 }
 
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100px;
     width: 100%;
     max-width: $max-width;
+    box-sizing: border-box;
+    padding: 37px 100px;
     z-index: 3;
     margin: 0;
 }
@@ -39,9 +43,14 @@ header {
 
 .nav {
     display: flex;
-    gap: 25x;
     list-style: none;
     white-space: nowrap;
+    margin-block-start: unset;
+    margin-block-end: unset;
+}
+
+ul {
+    padding-inline-start: unset !important;
 }
 
 .nav * {
@@ -174,7 +183,7 @@ header {
 }
 
 .mobile-menu-wrapper {
-    top: 100px;
+    top: 110px;
     left: 0;
     position: absolute;
     display: flex;
@@ -183,15 +192,14 @@ header {
     align-items: center;
     height: calc(100svh - 100px);
     width: 100svw;
-    max-width: 100%;
     background-color: rgba(20, 29, 47, 0.8);
     z-index: 8;
-    transform: translateX(100vw);
+    transform: translateX(100svw);
     transition: all 225ms ease-in-out;
 
     .nav-mobile {
-        width: 100vw;
-        max-width: 100%;
+        width: 100svw;
+        height: 100svh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -222,7 +230,7 @@ header {
     }
 
     .nav-mobile a:hover {
-        color: $light-blue;
+        color: $light-green;
         transition: all .35s ease;
     }
 }
@@ -235,6 +243,9 @@ header {
 @media screen and (max-width: 1100px) {
     header {
         height: 110px;
+    }
+
+    .header-content {
         padding: 37px 25px;
     }
 

@@ -4,7 +4,7 @@
       <div class="portrait-container">
         <img class="portrait-background" src="assets/img/background-elements/background-element_2.png"
           data-aos="fade-in" data-aos-delay="300" />
-        <img class="portrait" src="assets/img/pictures-ben/ben.png" data-aos="fade-in" data-aos-delay="600" />
+        <img class="portrait" src="assets/img/pictures-ben/ben.png" data-aos="fade-in" data-aos-delay="900" />
       </div>
       <div class="startscreen-right">
         <div class="text-wrapper">
@@ -13,10 +13,10 @@
           } @else { <div class="headline-1-ger" data-aos="zoom-in">Ich bin</div>}
           <div class="text-horizontal">
             @if (this.showEnglishVersion) {
-            <div class="headline-2" data-aos="zoom-in" data-aos-delay="300">BENJAMIN TIETZ</div>
-            } @else { <div class="headline-2" data-aos="zoom-in" data-aos-delay="300">BENJAMIN TIETZ</div>}
-            @if (this.showEnglishVersion) { <div class="headline-3" data-aos="fade-left" data-aos-delay="600">Frontend
-              Developer</div>} @else { <div class="headline-3" data-aos="fade-left" data-aos-delay="600">Frontend
+            <div class="headline-2" data-aos="zoom-in" data-aos-delay="900">BENJAMIN TIETZ</div>
+            } @else { <div class="headline-2" data-aos="zoom-in" data-aos-delay="900">BENJAMIN TIETZ</div>}
+            @if (this.showEnglishVersion) { <div class="headline-3" data-aos="fade-left" data-aos-delay="1800">Frontend
+              Developer</div>} @else { <div class="headline-3" data-aos="fade-left" data-aos-delay="1800">Frontend
               Entwickler</div>}
 
           </div>
@@ -29,9 +29,11 @@
       </div>
     </div>
     <div class="scroll-down-alert">
-      @if (this.showEnglishVersion) {<div class="scroll-down-text">Scroll down</div>}
-      @else { <div class="scroll-down-text">Scroll runter</div>}
-      <img class="scroll-down-animation" src="assets/img/icons/arrow-down-line.png" />
+      <div class="scroll-down-content">
+        @if (this.showEnglishVersion) {<span>Scroll down</span> }
+        @else { <span>Scroll runter</span> }
+        <img class="scroll-down-animation" src="assets/img/icons/arrow-down-line.png" />
+      </div>
     </div>
   </div>
   <img class="wave" src="assets/img/background-elements/wave.png" />
@@ -44,7 +46,7 @@
       <a href="mailto:mail@benjamin-tietz.com">
         <img class="icon email" src="assets/img/icons/email.png" />
       </a>
-      <a href="https://www.linkedin.com/in/benjamin-tietz-071ba0289" target="_blank">
+      <a href="https://www.linkedin.com/in/benjamin-tietz/" target="_blank">
         <img class="icon linkedin" src="assets/img/icons/linkedin.png" />
       </a>
       <a class="my-email" href="mailto:mail@benjamin-tietz.com">mail&#64;benjamin-tietz.com</a>

@@ -41,25 +41,50 @@
         <img src="assets/img/icons/material-design.png" />
         <p>Material Design</p>
       </div>
-      <div class="icon-wrapper-continually-learning icon-wrapper">
-        <img src="assets/img/icons/continually-learning.png" />
-        <p>Continually
-          learning</p>
+      <div class="icon-wrapper-continually-learning">
+        <img class="continually-learning-img" src="assets/img/icons/continually-learning.png" />
+        @if (this.showEnglishVersion) {
+        <p>Continually learning</p>
+        } @else {
+        <p>Kontinuierliches Lernen</p>
+        }
         <div class="hover-container">
           <div class="hover-content">
-            <p>I have a special intrest in learning</p>
-            <div class="intrest-container">
-              <div class="intrest-content">
+            @if (this.showEnglishVersion) {
+            <p>I have a special interest in learning</p>
+            } @else {
+            <p>Ich habe ein besonderes Interesse am Lernen</p>
+            }
+            <div class="interest-container">
+              <div class="interest-content">
                 <img src="assets/img/icons/react.png" />
                 <p>React</p>
               </div>
-              <div class="intrest-content">
+              <div class="interest-content">
                 <img src="assets/img/icons/vue-js.png" />
                 <p>Vue Js</p>
               </div>
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="continually-learning-mobile">
+        @if (this.showEnglishVersion) {
+        <h2>Looking for <span class="highlight">another skill</span>?</h2>
+        <h3>My strong communication skills, problem-solving abilities, and adaptability
+          have
+          consistently contributed to successful project outcomes, both independently and in <strong>team</strong>
+          settings.</h3>
+        } @else {
+        <h2>Suchen Sie nach <span class="highlight">anderen Fähigkeiten</span>?</h2>
+        <h3>Meine ausgeprägten Kommunikationsfähigkeiten,
+          Problemlösungskompetenzen und
+          Anpassungsfähigkeit haben
+          immer wieder zu erfolgreichen Projektergebnissen beigetragen, sowohl unabhängig als auch im
+          <strong>Team</strong>.
+        </h3>
+        }
       </div>
     </div>
     <img class="skills-background-element" src="assets/img/background-elements/background-element_1.png" /><img />
@@ -77,10 +102,10 @@
           and expand my knowledge.</p>
 
         <h2>Looking for <span class="highlight">another skill</span>?</h2>
-        <p>My strong communication skills, problem-solving abilities, and adaptability
+        <h3>My strong communication skills, problem-solving abilities, and adaptability
           have
           consistently contributed to successful project outcomes, both independently and in <strong>team</strong>
-          settings.</p>
+          settings.</h3>
         } @else { <p>Ich habe meine Ausbildung erfolgreich an einer TÜV-zertifizierten Ausbildungsstätte abgeschlossen,
           wo ich <strong>praktische Erfahrung</strong> mit einer Reihe von Technologien sammeln konnte.</p>
         <p>Während meiner Ausbildung habe ich an mehreren Projekten gearbeitet und dabei meine Fähigkeiten sowohl in der
@@ -91,12 +116,12 @@
           und mein Wissen erweitern konnte.
         </p>
         <h2>Suchen Sie nach <span class="highlight">anderen Fähigkeiten</span>?</h2>
-        <p>Meine ausgeprägten Kommunikationsfähigkeiten,
+        <h3>Meine ausgeprägten Kommunikationsfähigkeiten,
           Problemlösungskompetenzen und
           Anpassungsfähigkeit haben
           immer wieder zu erfolgreichen Projektergebnissen beigetragen, sowohl unabhängig als auch im
           <strong>Team</strong>.
-        </p>}
+        </h3>}
         @if (this.showEnglishVersion) { <button routerLink="/contact-me" fragment="contactMe" class="btn-desptop">Get in
           touch</button>}
         @else { <button routerLink="/contact-me" fragment="contactMe" class="btn-desptop">Kontaktieren</button>}

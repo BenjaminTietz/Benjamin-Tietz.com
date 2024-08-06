@@ -3,14 +3,12 @@
 .startscreen-wrapper {
   position: relative;
   height: calc(100svh - 100px);
-  width: 100svw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   box-sizing: content-box;
-  padding-bottom: 20svh;
-  overflow-y: hidden;
 }
 
 .home-about {
@@ -60,6 +58,9 @@ button {
 
   img {
     max-height: 80svh;
+  }
+
+  img :last-child {
     transform: scaleX(-1);
   }
 }
@@ -77,6 +78,8 @@ button {
   position: absolute;
   width: 60svw;
   height: 100svh;
+
+
 }
 
 .startscreen-right {
@@ -109,7 +112,7 @@ button {
       color: $white;
       line-height: 108px;
       white-space: nowrap;
-      margin-bottom: -15px;
+
     }
 
     .headline-3 {
@@ -118,29 +121,30 @@ button {
       color: $purple;
       line-height: 69.6px;
       white-space: nowrap;
-      margin-top: -15px;
+
     }
   }
 
   .headline-1 {
-    height: 146px;
+    height: 182px;
     font-weight: 400;
     font-size: 64px;
     color: $white;
     line-height: 76.8px;
     transform: rotate(-90deg);
     white-space: nowrap;
+    margin-right: -30px;
   }
 
   .headline-1-ger {
-    height: 160px;
+    height: 187px;
     font-weight: 400;
-    font-size: 28px;
+    font-size: 44px;
     color: $white;
     line-height: 43.8px;
     transform: rotate(-90deg);
     white-space: nowrap;
-    margin-right: -28px;
+    margin-right: -55px;
   }
 
 }
@@ -153,22 +157,29 @@ button {
   z-index: 5;
 }
 
+
+
 .scroll-down-alert {
   color: $white;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 60px;
-  height: max-content;
-  z-index: 5;
-  white-space: nowrap;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 8;
   position: absolute;
-  bottom: 12svh;
-  right: 3.5svw;
+  bottom: 5%;
+  right: 2.5%;
+  width: 100%;
+  max-width: $max-width;
 
   img {
     width: 24px;
     height: 24px;
+  }
+
+  span {
+    font-size: 23px;
+    transform: rotate(90deg);
   }
 
   .scroll-down-animation {
@@ -190,10 +201,12 @@ button {
   }
 }
 
-.scroll-down-text {
-  font-size: 23px;
+.scroll-down-content {
   display: flex;
-  transform: rotate(90deg);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
 }
 
 .background-scroll {
@@ -215,12 +228,9 @@ button {
 
 .startscreen-bottom {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  height: 10svh;
   width: 100svw;
-  margin-top: -10svh;
-
 }
 
 
@@ -229,7 +239,6 @@ button {
   align-items: center;
   gap: 42px;
   z-index: 5;
-  margin-bottom: 15svh;
 
   .icon {
     transition: transform 0.175s ease;
@@ -278,36 +287,38 @@ button {
 
 
 
-@media screen and (max-width: 1600px) {
 
-
-  .headline-1 {
-    font-size: calc(32px + 1svh) !important;
-    margin-top: 7px;
-  }
-
-  .headline-2 {
-    font-size: calc(45px + 1svh) !important;
-  }
-
-  .headline-3 {
-    font-size: calc(29px + 1svh) !important;
-  }
-
-}
 
 @media screen and (max-width: 1400px) {
+  .text-horizontal {
+    margin-top: 51px !important;
+  }
+
   .headline-1 {
-    font-size: calc(36px + 0.5svh) !important;
-    margin-top: 7px;
+    font-size: 32px !important;
+    font-weight: 400 !important;
+    line-height: 32px !important;
+  }
+
+  .headline-1-ger {
+    font-size: 22px !important;
+    font-weight: 400 !important;
+    line-height: 46px !important;
+    margin-right: -28px !important;
   }
 
   .headline-2 {
-    font-size: calc(45px + 1svh) !important;
+    font-size: 44px !important;
+    font-weight: 700 !important;
+    line-height: 44px !important;
+    margin-bottom: unset;
   }
 
   .headline-3 {
-    font-size: calc(29px + 1svh) !important;
+    font-size: 28px !important;
+    font-weight: 400 !important;
+    line-height: 33.6px !important;
+    margin-top: 8px !important;
   }
 }
 
@@ -335,11 +346,20 @@ button {
 }
 
 @media screen and (max-width: 1100px) {
+  .text-horizontal {
+    margin-top: 51px !important;
+  }
+
+  .headline-1 {
+    margin-top: unset !important;
+  }
+
 
 
   .startscreen-right {
     position: absolute;
-    bottom: 24svh;
+    bottom: 5%;
+    width: 100%;
   }
 
   .portrait {
@@ -355,27 +375,12 @@ button {
     height: 100svh;
   }
 
-
   .text-wrapper {
-    margin-top: 80px;
-    max-width: 353px;
+    width: 100%;
+    justify-content: center;
     max-height: 89px;
     gap: 10px;
     z-index: 6;
-
-    .headline-1 {
-      font-size: 32px !important;
-      margin-top: -15px;
-    }
-
-    .headline-2 {
-      font-size: 45px !important;
-    }
-
-    .headline-3 {
-      font-size: 29px !important;
-      margin-top: -50px;
-    }
   }
 
   .home-about {
@@ -385,7 +390,11 @@ button {
   }
 
   .btn-container {
-    margin-top: 20px;
+    margin-top: 40px !important;
+  }
+
+  button {
+    margin-top: 48px !important;
   }
 
   .wave {
@@ -396,44 +405,32 @@ button {
     z-index: 4;
   }
 
-  .social-box {
-    margin-bottom: 18svh;
-  }
+  .social-box {}
 }
 
 @media screen and (max-width: 850px) {
-  .wave {
-    top: 50svh;
-  }
+
+
 
   .my-email {
     display: none;
   }
 
+  .wave {
+    top: 36svh;
+    height: 80svh;
+  }
 
 }
 
 @media only screen and (max-width: 600px) {
 
-  .text-wrapper {
-    width: 353px;
-    height: 89px;
-    gap: 10px;
-    z-index: 6;
+  .headline-1 {
+    margin-left: 40px;
+  }
 
-    .headline-1 {
-      font-size: 32px !important;
-      margin-top: -15px;
-    }
-
-    .headline-2 {
-      font-size: 45px !important;
-    }
-
-    .headline-3 {
-      font-size: 29px !important;
-      margin-top: -50px;
-    }
+  .headline-1-ger {
+    margin-left: 40px;
   }
 
   .home-about {
@@ -448,83 +445,68 @@ button {
 }
 
 @media only screen and (max-width: 450px) {
-  .startscreen-wrapper {
-    height: 85svh !important;
 
+
+  .headline-1 {
+    font-size: calc(32px - 1svh) !important;
+    font-weight: 400 !important;
+    line-height: 32px !important;
+    margin-right: -34px !important;
+    margin-left: 60px !important;
   }
 
-  .social-box {
-    margin-top: 20svh;
-    gap: 32px !important;
+  .headline-1-ger {
+    font-size: calc(22px - 0.75svh) !important;
+    font-weight: 400 !important;
+    line-height: 46px !important;
+    margin-right: -28px !important;
+    margin-left: 50px !important;
   }
 
-  .wave {
-    top: 45svh;
-    max-height: 80svh;
+  .headline-2 {
+    font-size: calc(44px - 1svh) !important;
+    font-weight: 700 !important;
+    line-height: 44px !important;
+    margin-bottom: unset;
   }
 
-  .portrait-container {
-    height: 50svh;
+  .headline-3 {
+    font-size: calc(28px - 1svh) !important;
+    font-weight: 400 !important;
+    line-height: 33.6px !important;
+    margin-top: -10px !important;
   }
 
-  .startscreen-right {
-    position: absolute;
-    bottom: 24px;
+  .text-horizontal {
+    margin-top: 57px !important;
   }
 
   .btn-container {
-    margin-top: unset;
-
-    button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: unset;
-      width: 133px !important;
-      height: 49px !important;
-      padding: 15px 30px 15px 30px !important;
-      font-size: 23px !important;
-      font-weight: 400 !important;
-      line-height: 27.6px !important;
-      text-wrap: nowrap;
-    }
+    margin-top: unset !important;
   }
 
-  .text-wrapper {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 20px;
-    z-index: 6;
-    margin-top: unset;
-    width: 90svw;
-
-    .text-horizontal {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-      z-index: 5;
-      position: relative;
-      margin-left: -150px;
-    }
-
-    .headline-1 {
-      font-size: calc(32px - 5.5svw) !important;
-      margin-top: 10px;
-    }
-
-    .headline-2 {
-      font-size: calc(45px - 5.5svw) !important;
-      white-space: wrap;
-    }
-
-    .headline-3 {
-      font-size: calc(29px - 5.5svw) !important;
-      margin-top: -60px;
-      white-space: wrap;
-    }
+  .startscreen-right {
+    bottom: 0 !important;
   }
 
+  button {
+    width: 133px;
+    height: 49px;
+    gap: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.2px;
+  }
 
+  .portrait-container {
+    height: 75%;
+  }
+
+  .social-box {
+    gap: 22px;
+  }
+
+  .startscreen-bottom {
+    padding-top: 10%;
+  }
 }

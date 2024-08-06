@@ -2,15 +2,17 @@
 
 .skills-wrapper {
   position: relative;
-  height: 55svh;
-  width: 90svw;
+  height: 60svh;
+  width: 100%;
+  max-width: $max-width;
+  box-sizing: border-box;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   color: $white;
-  padding-top: 20svh;
   z-index: 10;
-  padding-left: 5svw;
+  padding: 100px 100px 0 100px;
+  gap: 64px;
 }
 
 .icon-wrapper {
@@ -26,13 +28,15 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
-  width: 50svw;
+  box-sizing: border-box;
+  width: 50%;
+  max-width: calc($max-width / 2);
   height: 100%;
   gap: 60px;
   z-index: 5;
 
   img {
-    width: 60px;
+    width: 57px;
     height: 60px;
     transition: transform 0.175s ease-in-out;
   }
@@ -96,18 +100,30 @@
   .icon-wrapper-continually-learning {
     color: #9747FF;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 88px;
+    height: 100px;
+    transition: all ease-in-out 175ms;
 
-    &:hover {
-      color: white;
+    img {
+      width: 57px;
+      height: 60px;
+      transition: transform 0.175s ease-in-out;
+    }
 
-      //<!--to-do apply filter on hovering only for first-child, not for all-->
-      img:first-of-type {
-        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(0deg) brightness(180%) contrast(100%);
-      }
+    &:hover .continually-learning-img {
+      filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(0deg) brightness(180%) contrast(100%);
+      transform: translateY(-10px) scale(1.05);
+    }
 
-      .hover-container {
-        display: flex;
-      }
+    &:hover p {
+      color: $white;
+    }
+
+    &:hover .hover-container {
+      display: flex;
     }
 
     .hover-container {
@@ -116,7 +132,7 @@
       border-radius: 20px;
       background-color: #fff;
       position: absolute;
-      top: -160px;
+      bottom: 128px;
       left: -50px;
       display: none;
 
@@ -149,7 +165,7 @@
           white-space: normal;
         }
 
-        .intrest-container {
+        .interest-container {
           display: flex;
           justify-content: center;
           align-items: center;
@@ -158,7 +174,7 @@
           width: 100%;
           height: 100%;
 
-          .intrest-content {
+          .interest-content {
             display: flex;
             justify-content: center;
             flex-direction: column;
@@ -182,8 +198,6 @@
       }
     }
   }
-
-
 }
 
 
@@ -199,17 +213,18 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
-  width: 47.5svw;
+  box-sizing: border-box;
+  width: 50%;
+  max-width: calc($max-width / 2);
   height: 100%;
-  margin-right: 5svw;
   z-index: 5;
   position: relative;
 
   .short-purple-line {
     border: 4px solid $purple;
-    width: 10svw;
+    width: 350px;
     position: absolute;
-    right: -10svw;
+    right: -350px;
     z-index: 5;
     margin-top: 54px;
   }
@@ -219,6 +234,9 @@
     justify-content: flex-start;
     align-items: flex-end;
     flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: calc($max-width / 2);
 
     p {
       text-align: end;
@@ -236,7 +254,7 @@
         font-size: 90px;
         line-height: 108px;
         align-content: end;
-        margin-right: 0.5svw;
+        margin-right: 24px;
       }
     }
 
@@ -280,6 +298,38 @@
         color: $purple;
       }
     }
+
+    h3 {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19.2px;
+      text-align: end;
+    }
+  }
+}
+
+.continually-learning-mobile {
+  display: none;
+  flex-direction: column;
+  width: calc(100svw - 100px);
+  box-sizing: border-box;
+
+  h2 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28.8px;
+    text-align: center;
+
+    span {
+      color: $purple;
+    }
+  }
+
+  h3 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.2px;
+    text-align: center;
   }
 }
 
@@ -294,59 +344,106 @@
 
 @media screen and (max-width: 1600px) {}
 
-@media screen and (min-width: 1100px) {}
+@media screen and (min-width: 1100px) {
+  .continually-learning-mobile {
+    display: none;
+  }
+}
 
 @media screen and (max-width: 1100px) {
+  .icon-wrapper-continually-learning {
+    img {
+      width: 48px !important;
+      height: 48px !important;
+    }
+
+    p {
+      font-weight: 700 !important;
+      font-size: 14px !important;
+      line-height: 16.8px !important;
+    }
+  }
+
+  .continually-learning-mobile {
+    display: flex;
+  }
+
   .skills-wrapper {
-    height: fit-content;
     align-items: flex-start;
     flex-wrap: wrap-reverse;
     justify-content: center;
-    padding-top: 10svh;
+    padding: 50px 50px 0 50px;
+    height: fit-content;
+    gap: 24px;
   }
 
   .skills-left {
-    width: 100svw;
-    max-width: 100%;
+    width: calc(100svw - 100px);
+    box-sizing: border-box;
     flex: 0 0 75%;
-    padding-left: unset;
-    padding-top: 64px;
     justify-content: space-evenly;
+    max-width: unset;
 
     img {
       width: 42px;
       height: 45px;
     }
 
+    h2 {
+      font-size: 32px;
+      line-height: 38.4px;
+    }
+
+
     p {
-      font-size: 14px;
+      font-size: 24px;
       font-weight: 700;
-      line-height: 16.8px;
+      line-height: 28.8px;
+    }
+
+    .icon-wrapper {
+      gap: 10px;
+
+      img {
+        width: 48px;
+        height: 48px;
+      }
+
+      p {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 16.8px;
+      }
     }
   }
 
   .skills-right {
-    width: 100svw;
-    padding-right: 5svw;
     z-index: 6;
+    max-width: unset;
+    width: calc(100svw - 100px);
+    box-sizing: border-box;
 
     .short-purple-line {
       margin-top: 22px;
-      z-index: 6;
-      right: -6svw;
     }
 
     .skills-right-content {
-      width: 90svw;
+      width: 100%;
+
+      h2 {
+        display: none;
+      }
+
+      h3 {
+        display: none;
+      }
 
       .skills-background-element {
         z-index: 4;
       }
 
-
-
       .skills-headline-container {
-        width: 100vw;
+        width: 100%;
         justify-content: flex-end;
 
         .skills-headline {
@@ -356,9 +453,7 @@
           align-content: end;
         }
       }
-
     }
-
   }
 
 
@@ -369,6 +464,20 @@
 
 }
 
+@media screen and (max-width: 800px) {
+  .skills-wrapper {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
 @media screen and (max-width: 600px) {}
 
-@media only screen and (max-width: 450px) {}
+@media only screen and (max-width: 450px) {
+
+  h2 {
+    font-size: 26px !important;
+    line-height: 32.4px !important;
+  }
+
+}
