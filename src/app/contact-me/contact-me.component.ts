@@ -32,12 +32,12 @@ export class ContactMeComponent implements OnInit {
   }
 
   /**
-   * Custom validator to check if the input is a full name (two words).
+   * Custom validator to check if the input is a full name (two or more words, allowing hyphens).
    * @param {AbstractControl} control - The form control to validate.
    * @returns {ValidationErrors | null} An object with validation errors or null if the control is valid.
    */
   fullNameValidator(control: AbstractControl): ValidationErrors | null {
-    const fullNamePattern = /^[a-zA-Z]+ [a-zA-Z]+$/;
+    const fullNamePattern = /^[a-zA-Z]+(?:[-\s][a-zA-Z]+)+$/;
     return fullNamePattern.test(control.value) ? null : { fullName: true };
   }
 

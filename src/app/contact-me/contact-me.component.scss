@@ -85,25 +85,6 @@
     align-items: center;
     width: 50%;
 
-    .from-name {
-        display: flex;
-        align-items: center;
-        padding: 15px 25px;
-        width: 100%;
-        max-width: 600px;
-        height: 50px;
-        margin-bottom: 32px;
-        background-color: $bg-dark-blue;
-        border: 1px solid;
-        border-color: $purple;
-        border-radius: 10px;
-        color: $white;
-        gap: 10px;
-
-        &:hover {
-            border-color: $light-green;
-        }
-    }
 
     .form-attention {
         border-color: $form-attention;
@@ -115,13 +96,13 @@
         background-color: $bg-dark-blue;
     }
 
-    .from-input {
+    .from-input,
+    .from-message {
         display: flex;
         align-items: center;
         padding: 15px 25px;
         width: 100%;
         max-width: 600px;
-        height: 50px;
         margin-bottom: 32px;
         background-color: $bg-dark-blue;
         border: 1px solid;
@@ -134,27 +115,26 @@
         &:hover {
             border-color: $light-green;
         }
+
+        &:focus {
+            outline: none;
+            border-color: $light-green;
+        }
+
+        &.ng-touched.ng-invalid {
+            border-color: $form-attention;
+        }
+
+        &.ng-touched.ng-valid {
+            background-color: $bg-dark-blue !important;
+            color: $white !important;
+            border-color: $purple !important;
+        }
     }
 
     .from-message {
-        display: flex;
-        align-items: center;
-        padding: 15px 25px;
-        width: 100%;
-        max-width: 600px;
         height: 202px;
-        margin-bottom: 32px;
-        background-color: $bg-dark-blue;
-        border: 1px solid;
-        border-color: $purple;
-        border-radius: 10px;
-        color: $white;
-        gap: 10px;
         resize: vertical;
-
-        &:hover {
-            border-color: $light-green;
-        }
     }
 }
 
