@@ -29,12 +29,14 @@ header {
     margin: 0;
 }
 
-.navbar-logo {
+.navbar-logo img {
+    width: 163px;
+    height: 42px;
+    transition: filter 0.3s ease;
+}
 
-    img {
-        width: 163px;
-        height: 42px;
-    }
+.navbar-logo img:hover {
+    filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.7));
 }
 
 .menu-img {
