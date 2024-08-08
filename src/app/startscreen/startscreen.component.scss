@@ -415,6 +415,11 @@ button {
   }
 
   .social-box {}
+
+  .startscreen-wrapper {
+    margin-top: 75px;
+    height: calc(100svh - 175px);
+  }
 }
 
 @media screen and (max-width: 850px) {
